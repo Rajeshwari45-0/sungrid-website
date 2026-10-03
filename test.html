@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SunGrid - Solar Energy</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="./style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         NAVIGATION BAR
+    ================================================== -->
+
+    <header class="top-section">
+
+        <nav class="navbar">
+
+            <a href="./test.html"
+               class="logo">
+
+                <img
+                    src="./images/logo.png"
+                    alt="SunGrid Logo"
+                >
+
+            </a>
+
+
+            <ul>
+
+                <li>
+                    <a href="./test.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./global-market.html">
+                        Global Market
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./schemes.html">
+                        Schemes
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         HERO SECTION WITH YOUTUBE VIDEO
+    ================================================== -->
+
+    <section class="hero">
+
+        <!-- YOUTUBE VIDEO BACKGROUND -->
+
+        <div class="youtube-background">
+
+            <iframe
+                src="https://www.youtube.com/embed/iCvUFavByJE?autoplay=1&mute=1&loop=1&playlist=iCvUFavByJE&controls=0&rel=0&modestbranding=1"
+                title="SunGrid Solar Energy"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+        <!-- DARK OVERLAY -->
+
+        <div class="hero-overlay"></div>
+
+
+        <!-- HERO CONTENT -->
+
+        <div class="hero-content">
+
+            <h1>
+                Powering a Brighter Tomorrow
+            </h1>
+
+            <p>
+                Discover reliable and affordable solar energy
+                solutions for your home and business.
+                Join SunGrid in creating a cleaner, greener
+                and more sustainable future.
+            </p>
+
+            <a href="./products.html"
+               class="btn">
+
+                Get Started
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ABOUT SUNGRID
+    ================================================== -->
+
+    <section class="home-about">
+
+        <div class="home-about-container">
+
+
+            <div class="home-about-image">
+
+                <img
+                    src="./images/solar-cell-manufacturing.jpg"
+                    alt="Solar panel manufacturing facility"
+                >
+
+            </div>
+
+
+
+            <div class="home-about-content">
+
+                <span class="home-about-label">
+                    ABOUT SUNGRID
+                </span>
+
+
+                <h2>
+                    Powering a
+                    <span>Brighter Future.</span>
+                </h2>
+
+
+                <p>
+                    SunGrid is committed to making clean,
+                    reliable and affordable solar energy
+                    accessible to homes, businesses and
+                    communities.
+                </p>
+
+
+                <p>
+                    We provide dependable solar energy
+                    solutions designed to help our customers
+                    reduce their dependence on traditional
+                    energy sources and move towards a cleaner
+                    and more sustainable future.
+                </p>
+
+
+                <div class="home-about-highlight">
+
+                    <strong>
+                        SunGrid Solar Energy
+                    </strong>
+
+                    <p>
+                        We don't just provide solar products;
+                        we help build smarter and more
+                        sustainable energy solutions for
+                        tomorrow.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="./about.html"
+                    class="home-about-btn"
+                >
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         OUR SOLAR SOLUTIONS
+    ================================================== -->
+
+    <section class="collection-section">
+
+        <div class="collection-heading">
+
+            <h2>
+                Our Solar Solutions
+            </h2>
+
+            <p>
+                Explore our range of reliable and sustainable
+                solar energy products.
+            </p>
+
+        </div>
+
+
+
+        <div class="collection-wrapper">
+
+
+            <button
+                class="collection-arrow left"
+                onclick="slideCollection(-1)"
+            >
+                &#10094;
+            </button>
+
+
+
+            <div
+                class="collection-slider"
+                id="collectionSlider"
+            >
+
+
+                <!-- SOLAR PANELS -->
+
+                <div class="collection-card">
+
+                    <img
+                        src="./images/solar-panels.jpg"
+                        alt="Solar Panels"
+                    >
+
+                    <div class="collection-card-content">
+
+                        <h3>
+                            Solar Panels
+                        </h3>
+
+                        <p>
+                            High-quality solar panels designed
+                            to convert sunlight into clean and
+                            reliable electricity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SOLAR BATTERIES -->
+
+                <div class="collection-card">
+
+                    <img
+                        src="./images/solar-batteries.jpg"
+                        alt="Solar Batteries"
+                    >
+
+                    <div class="collection-card-content">
+
+                        <h3>
+                            Solar Batteries
+                        </h3>
+
+                        <p>
+                            Reliable energy storage solutions
+                            that help you store and use solar
+                            power when needed.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SOLAR STREET LIGHTS -->
+
+                <div class="collection-card">
+
+                    <img
+                        src="./images/solar-street-lights.jpg"
+                        alt="Solar Street Lights"
+                    >
+
+                    <div class="collection-card-content">
+
+                        <h3>
+                            Solar Street Lights
+                        </h3>
+
+                        <p>
+                            Efficient solar-powered lighting
+                            solutions for streets, pathways
+                            and outdoor spaces.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SOLAR WATER PUMPS -->
+
+                <div class="collection-card">
+
+                    <img
+                        src="./images/solar-water-pumps.jpg"
+                        alt="Solar Water Pumps"
+                    >
+
+                    <div class="collection-card-content">
+
+                        <h3>
+                            Solar Water Pumps
+                        </h3>
+
+                        <p>
+                            Solar-powered water pumping
+                            systems designed for agricultural
+                            and water management needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SOLAR HOME SYSTEM -->
+
+                <div class="collection-card">
+
+                    <img
+                        src="./images/solar-home-system.jpg"
+                        alt="Solar Home System"
+                    >
+
+                    <div class="collection-card-content">
+
+                        <h3>
+                            Solar Home Systems
+                        </h3>
+
+                        <p>
+                            Complete solar solutions that help
+                            homes generate clean and dependable
+                            renewable energy.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button
+                class="collection-arrow right"
+                onclick="slideCollection(1)"
+            >
+                &#10095;
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         GLOBAL MARKET SECTION
+    ================================================== -->
+
+    <section class="global-market-section">
+
+        <div class="market-container">
+
+
+            <div class="market-heading">
+
+                <span>
+                    GLOBAL REACH
+                </span>
+
+                <h2>
+                    Solar Energy
+                    <strong>Across the World</strong>
+                </h2>
+
+                <p>
+                    Explore the growing global solar energy
+                    landscape and discover how renewable energy
+                    is shaping a cleaner future.
+                </p>
+
+            </div>
+
+
+
+            <div class="market-content">
+
+
+                <!-- GLOBAL MARKET IMAGE -->
+
+                <div class="market-image">
+
+                    <img
+                        src="./images/global-market.jpg"
+                        alt="Global solar energy market"
+                    >
+
+
+                    <div class="market-image-badge">
+
+                        <span>☀</span>
+
+                        <div>
+
+                            <strong>
+                                Global Solar Growth
+                            </strong>
+
+                            <small>
+                                Powering a sustainable future
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GLOBAL MARKET FEATURES -->
+
+                <div class="market-features">
+
+
+                    <div class="market-feature">
+
+                        <div class="market-icon">
+                            🌍
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Global Reach
+                            </h3>
+
+                            <p>
+                                Solar energy is expanding across
+                                homes, industries and communities
+                                worldwide.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="market-feature">
+
+                        <div class="market-icon">
+                            ⚡
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Clean Energy
+                            </h3>
+
+                            <p>
+                                Harness the power of sunlight to
+                                support cleaner and more sustainable
+                                energy systems.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="market-feature">
+
+                        <div class="market-icon">
+                            📈
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Growing Opportunity
+                            </h3>
+
+                            <p>
+                                Discover emerging opportunities in
+                                the rapidly evolving renewable
+                                energy sector.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <a
+                        href="./global-market.html"
+                        class="market-btn"
+                    >
+                        Explore Global Market
+                        <span>→</span>
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         SOLAR SCHEMES SECTION
+    ================================================== -->
+
+    <section class="schemes-section">
+
+        <div class="schemes-container">
+
+
+            <div class="schemes-heading">
+
+                <span>
+                    SOLAR SUPPORT
+                </span>
+
+                <h2>
+                    Explore Solar
+                    <strong>Schemes & Benefits</strong>
+                </h2>
+
+                <p>
+                    Learn about solar energy schemes, incentives
+                    and support available to encourage renewable
+                    energy adoption.
+                </p>
+
+            </div>
+
+
+
+            <div class="scheme-cards">
+
+
+                <!-- SCHEME 01 -->
+
+                <div class="scheme-card">
+
+                    <div class="scheme-card-image">
+
+                        <img
+                            src="./images/solar-subsidy.jpg"
+                            alt="Solar Subsidy"
+                        >
+
+                        <div class="scheme-number">
+                            01
+                        </div>
+
+                    </div>
+
+
+                    <div class="scheme-card-content">
+
+                        <span>
+                            SUBSIDY
+                        </span>
+
+                        <h3>
+                            Solar Subsidies
+                        </h3>
+
+                        <p>
+                            Understand available financial support
+                            and incentives that can help reduce
+                            solar installation costs.
+                        </p>
+
+                        <a href="./schemes.html">
+                            Learn More
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SCHEME 02 -->
+
+                <div class="scheme-card">
+
+                    <div class="scheme-card-image">
+
+                        <img
+                            src="./images/solar-for-homes.jpg"
+                            alt="Solar for Homes"
+                        >
+
+                        <div class="scheme-number">
+                            02
+                        </div>
+
+                    </div>
+
+
+                    <div class="scheme-card-content">
+
+                        <span>
+                            ROOFTOP SOLAR
+                        </span>
+
+                        <h3>
+                            Solar for Homes
+                        </h3>
+
+                        <p>
+                            Explore programs that encourage
+                            households to adopt rooftop solar
+                            and generate clean electricity.
+                        </p>
+
+                        <a href="./schemes.html">
+                            Learn More
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SCHEME 03 -->
+
+                <div class="scheme-card">
+
+                    <div class="scheme-card-image">
+
+                        <img
+                            src="./images/clean-energy-programs.jpg"
+                            alt="Clean Energy Programs"
+                        >
+
+                        <div class="scheme-number">
+                            03
+                        </div>
+
+                    </div>
+
+
+                    <div class="scheme-card-content">
+
+                        <span>
+                            RENEWABLE ENERGY
+                        </span>
+
+                        <h3>
+                            Clean Energy Programs
+                        </h3>
+
+                        <p>
+                            Discover initiatives designed to
+                            accelerate renewable energy adoption
+                            and sustainable development.
+                        </p>
+
+                        <a href="./schemes.html">
+                            View Schemes
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         HOW SOLAR WORKS
+    ================================================== -->
+
+    <section class="solar-works-section">
+
+        <div class="solar-works-heading">
+
+            <span>
+                HOW SOLAR WORKS
+            </span>
+
+            <h2>
+                From Sunlight to
+                <strong>Clean Energy</strong>
+            </h2>
+
+            <p>
+                Discover how solar energy is captured, converted
+                and used to power homes and businesses.
+            </p>
+
+        </div>
+
+
+
+        <div class="solar-works-container">
+
+
+            <!-- STEP 01 -->
+
+            <div class="solar-step">
+
+                <div class="solar-step-icon">
+                    ☀️
+                </div>
+
+                <div class="solar-step-number">
+                    01
+                </div>
+
+                <h3>
+                    Capture
+                </h3>
+
+                <p>
+                    Solar panels capture energy from sunlight.
+                </p>
+
+            </div>
+
+
+
+            <!-- ARROW -->
+
+            <div class="solar-step-arrow">
+                →
+            </div>
+
+
+
+            <!-- STEP 02 -->
+
+            <div class="solar-step">
+
+                <div class="solar-step-icon">
+                    🔆
+                </div>
+
+                <div class="solar-step-number">
+                    02
+                </div>
+
+                <h3>
+                    Convert
+                </h3>
+
+                <p>
+                    The solar system converts sunlight into
+                    usable electricity.
+                </p>
+
+            </div>
+
+
+
+            <!-- ARROW -->
+
+            <div class="solar-step-arrow">
+                →
+            </div>
+
+
+
+            <!-- STEP 03 -->
+
+            <div class="solar-step">
+
+                <div class="solar-step-icon">
+                    ⚡
+                </div>
+
+                <div class="solar-step-number">
+                    03
+                </div>
+
+                <h3>
+                    Store
+                </h3>
+
+                <p>
+                    Excess energy can be stored for later use.
+                </p>
+
+            </div>
+
+
+
+            <!-- ARROW -->
+
+            <div class="solar-step-arrow">
+                →
+            </div>
+
+
+
+            <!-- STEP 04 -->
+
+            <div class="solar-step">
+
+                <div class="solar-step-icon">
+                    🏠
+                </div>
+
+                <div class="solar-step-number">
+                    04
+                </div>
+
+                <h3>
+                    Power
+                </h3>
+
+                <p>
+                    Use clean solar energy for your home
+                    or business.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         TESTIMONIALS SECTION
+    ================================================== -->
+
+    <section class="testimonial-section">
+
+        <div class="testimonial-heading">
+
+            <h2>
+                WHAT OUR CLIENTS SAY
+            </h2>
+
+            <p>
+                Trusted by customers who choose clean energy.
+            </p>
+
+        </div>
+
+
+        <div class="testimonial-container">
+
+
+            <!-- TESTIMONIAL 01 -->
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Excellent solar solutions and smooth
+                    installation. The team was very professional."
+                </p>
+
+                <h3>
+                    Rahul Sharma
+                </h3>
+
+                <span>
+                    Residential Customer
+                </span>
+
+            </div>
+
+
+
+            <!-- TESTIMONIAL 02 -->
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Great customer service and quality products!
+                    I highly recommend SunGrid Solar."
+                </p>
+
+                <h3>
+                    Priya Patil
+                </h3>
+
+                <span>
+                    Homeowner
+                </span>
+
+            </div>
+
+
+
+            <!-- TESTIMONIAL 03 -->
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The solar panels have helped us reduce our
+                    electricity bills. Very satisfied!"
+                </p>
+
+                <h3>
+                    Amit Deshmukh
+                </h3>
+
+                <span>
+                    Residential Customer
+                </span>
+
+            </div>
+
+
+
+            <!-- TESTIMONIAL 04 -->
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "SunGrid provided excellent support throughout
+                    the process and answered all our questions."
+                </p>
+
+                <h3>
+                    Neha Kulkarni
+                </h3>
+
+                <span>
+                    Business Customer
+                </span>
+
+            </div>
+
+
+
+            <!-- TESTIMONIAL 05 -->
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "A reliable solar energy provider with quality
+                    products and a smooth experience."
+                </p>
+
+                <h3>
+                    Vikram Joshi
+                </h3>
+
+                <span>
+                    Homeowner
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         READY TO GO SOLAR SECTION
+    ================================================== -->
+
+    <section class="solar-cta-section">
+
+        <div class="solar-cta-container">
+
+
+            <div class="solar-cta-content">
+
+                <h2>
+                    READY TO GO SOLAR?
+                </h2>
+
+
+                <p>
+                    Take the first step towards a sustainable future
+                    with our customized solar solutions. Whether
+                    it's for your home, business, or an industrial
+                    project, we've got you covered!
+                </p>
+
+
+                <p>
+                    Reach out to us for expert consultation
+                    and a free quote.
+                </p>
+
+
+                <a
+                    href="#contact"
+                    class="solar-cta-btn"
+                >
+                    Get a Free Quote
+                </a>
+
+            </div>
+
+
+
+            <div class="solar-cta-image">
+
+                <img
+                    src="https://storage.chat-box.ai/16040955/16852086/abbeaa9c-12b6-4944-89a3-d99f8542f5e1-image-1791010625798.png?Expires=1791014226&Key-Pair-Id=K159YY5OTEALJZ&Signature=oD9Y2-HsiwLAMe5BQIT2-jXnMnG3JUOlFmY6NeHgIsN1rN4wtw-ZQCpbDcvIJYFJfL2YPKqFlp-ma-4USEO-cMEQ0DutfsIFFoXA9~0Dc3dP8SlBf0pL1IamB3q2Yuxujd97kVuI20Nw1E3SBkbUIhVSXEKP2Rx909qvXU7PYeyuphOzCLj8Uhr1ZbC~DJGP8r~nzjw7XkvYWgR1eOnY~RaYbRwkyVU6fWAh1PF9eV6Rl7nbxevy7Il9yo1ZOc3DhROJ189mpfazmKTHUA3fy6mxDP9eq4LOvcbyJJaEI1HkOcyP1LAMYS0TfOQ8-oW0OFqcTdb7BsoI44vOMrg6dQ__"
+                    alt="Solar-powered homes and clean energy"
+                >
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         CONTACT / FOOTER
+    ================================================== -->
+
+    <section
+        class="contact-section"
+        id="contact"
+    >
+
+        <div class="contact-container">
+
+
+            <!-- LOGO -->
+
+            <div class="contact-logo">
+
+                <a href="./test.html">
+
+                    <img
+                        src="./images/logo.png"
+                        alt="SunGrid Logo"
+                    >
+
+                </a>
+
+
+                <p>
+                    SunGrid is committed to providing clean,
+                    reliable and sustainable solar energy
+                    solutions for homes and businesses.
+                </p>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="contact-box">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <a href="./test.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./products.html">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./global-market.html">
+                            Global Market
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./schemes.html">
+                            Schemes
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-box contact-info">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+
+                <!-- PHONE 1 -->
+
+                <p>
+
+                    <a href="tel:+919175844355">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            +91 9175844355
+                        </span>
+
+                    </a>
+
+                </p>
+
+
+                <!-- PHONE 2 -->
+
+                <p>
+
+                    <a href="tel:+919420342512">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            +91 9420342512
+                        </span>
+
+                    </a>
+
+                </p>
+
+
+                <!-- EMAIL -->
+
+                <p>
+
+                    <a href="mailto:rajeshwariarekar7@gmail.com">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            rajeshwariarekar7@gmail.com
+                        </span>
+
+                    </a>
+
+                </p>
+
+
+                <!-- WHATSAPP -->
+
+                <p>
+
+                    <a
+                        href="https://wa.me/919175844355"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        <span>
+                            Chat on WhatsApp
+                        </span>
+
+                    </a>
+
+                </p>
+
+
+                <!-- INSTAGRAM -->
+
+                <p>
+
+                    <a
+                        href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                        <span>
+                            Follow us on Instagram
+                        </span>
+
+                    </a>
+
+                </p>
+
+
+                <!-- ADDRESS -->
+
+                <p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=SunGrid+Solar+Energy+Pune+Maharashtra+India"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            SunGrid Solar Energy,<br>
+                            Pune, Maharashtra, India
+                        </span>
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 SunGrid. All Rights Reserved.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+        function slideCollection(direction) {
+
+            const slider =
+                document.getElementById("collectionSlider");
+
+            const card =
+                slider.querySelector(".collection-card");
+
+            const cardWidth =
+                card.offsetWidth + 35;
+
+            slider.scrollBy({
+
+                left: direction * cardWidth,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SunGrid - Solar Energy</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="top-section">
+
+        <nav class="navbar">
+
+
+            <!-- SunGrid Logo -->
+
+            <a
+                href="./index.html"
+                class="logo"
+            >
+
+                <img
+                    src="./images/logo.png"
+                    alt="SunGrid Logo"
+                >
+
+            </a>
+
+
+            <!-- Navigation Links -->
+
+            <ul>
+
+                <li>
+                    <a href="./index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./products.html">
+                        Products
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./global-market.html">
+                        Global Market
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./schemes.html">
+                        Schemes
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero">
+
+
+        <div class="hero-content">
+
+            <h1>
+                Powering a Brighter Tomorrow
+            </h1>
+
+
+            <p>
+                Discover reliable and affordable solar energy
+                solutions for your home and business.
+                Join SunGrid in creating a cleaner, greener
+                and more sustainable future.
+            </p>
+
+
+            <a
+                href="./products.html"
+                class="btn"
+            >
+                Get Started
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         SOLAR COLLECTION
+    ========================== -->
+
+    <section class="collection-section">
+
+
+        <!-- Section Heading -->
+
+        <div class="collection-heading">
+
+            <h2>
+                Our Solar Solutions
+            </h2>
+
+            <p>
+                Explore our range of reliable and sustainable
+                solar energy products.
+            </p>
+
+        </div>
+
+
+
+        <!-- Collection Wrapper -->
+
+        <div class="collection-wrapper">
+
+
+            <!-- Left Arrow -->
+
+            <button
+                class="collection-arrow left"
+                onclick="slideCollection(-1)"
+            >
+                &#10094;
+            </button>
+
+
+
+            <!-- Slider -->
+
+            <div
+                class="collection-slider"
+                id="collectionSlider"
+            >
+
+
+                <!-- Solar Panels -->
+
+                <div class="collection-card">
+
+                    <img
+                        src="./images/solar-panels.jpg"
+                        alt="Solar Panels"
+                    >
+
+                    <div class="collection-card-content">
+
+                        <h3>
+                            Solar Panels
+                        </h3>
+
+                        <p>
+                            High-quality solar panels designed
+                            to convert sunlight into clean
+                            and reliable electricity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Solar Batteries -->
+
+                <div class="collection-card">
+
+                    <img
+                        src="./images/solar-batteries.jpg"
+                        alt="Solar Batteries"
+                    >
+
+                    <div class="collection-card-content">
+
+                        <h3>
+                            Solar Batteries
+                        </h3>
+
+                        <p>
+                            Reliable energy storage solutions
+                            that help you store and use solar
+                            power when needed.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Solar Street Lights -->
+
+                <div class="collection-card">
+
+                    <img
+                        src="./images/solar-street-lights.jpg"
+                        alt="Solar Street Lights"
+                    >
+
+                    <div class="collection-card-content">
+
+                        <h3>
+                            Solar Street Lights
+                        </h3>
+
+                        <p>
+                            Efficient solar-powered lighting
+                            solutions for streets, pathways
+                            and outdoor spaces.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Solar Water Pumps -->
+
+                <div class="collection-card">
+
+                    <img
+                        src="./images/solar-water-pumps.jpg"
+                        alt="Solar Water Pumps"
+                    >
+
+                    <div class="collection-card-content">
+
+                        <h3>
+                            Solar Water Pumps
+                        </h3>
+
+                        <p>
+                            Solar-powered water pumping
+                            systems designed for agricultural
+                            and water management needs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Solar Home Systems -->
+
+                <div class="collection-card">
+
+                    <img
+                        src="./images/solar-home-system.jpg"
+                        alt="Solar Home System"
+                    >
+
+                    <div class="collection-card-content">
+
+                        <h3>
+                            Solar Home Systems
+                        </h3>
+
+                        <p>
+                            Complete solar solutions that help
+                            homes generate clean and dependable
+                            renewable energy.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Right Arrow -->
+
+            <button
+                class="collection-arrow right"
+                onclick="slideCollection(1)"
+            >
+                &#10095;
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
+    <section class="contact-section">
+
+
+        <div class="contact-container">
+
+
+            <!-- Company Information -->
+
+            <div class="contact-logo">
+
+                <a href="./index.html">
+
+                    <img
+                        src="./images/logo.png"
+                        alt="SunGrid Logo"
+                    >
+
+                </a>
+
+
+                <p>
+                    SunGrid is committed to providing clean,
+                    reliable and sustainable solar energy
+                    solutions for homes and businesses.
+                </p>
+
+            </div>
+
+
+
+            <!-- Quick Links -->
+
+            <div class="contact-box">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <a href="./index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./products.html">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./global-market.html">
+                            Global Market
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./schemes.html">
+                            Schemes
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Contact Information -->
+
+            <div class="contact-box contact-info">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+
+                <p>
+                    <strong>Phone:</strong><br>
+                    +91 9175844355
+                </p>
+
+
+                <p>
+                    <strong>Phone:</strong><br>
+                    +91 9420342512
+                </p>
+
+
+                <p>
+                    <strong>Email:</strong><br>
+                    info@sungrid.com
+                </p>
+
+
+                <p>
+                    <strong>Address:</strong><br>
+                    SunGrid Solar Energy,<br>
+                    Pune, Maharashtra, India
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Copyright -->
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 SunGrid. All Rights Reserved.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         SLIDER JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function slideCollection(direction) {
+
+            const slider =
+                document.getElementById("collectionSlider");
+
+            const card =
+                slider.querySelector(".collection-card");
+
+            const cardWidth =
+                card.offsetWidth + 35;
+
+            slider.scrollBy({
+
+                left: direction * cardWidth,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
