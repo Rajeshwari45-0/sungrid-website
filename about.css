@@ -1,7 +1,4 @@
-/* ==================================================
-   RESET
-================================================== */
-
+```css
 * {
     margin: 0;
     padding: 0;
@@ -16,16 +13,21 @@ body {
     width: 100%;
     font-family: "Poppins", sans-serif;
     color: #101528;
-    background-color: #ffffff;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 a {
     text-decoration: none;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+ul {
+    list-style: none;
 }
 
 
@@ -35,98 +37,63 @@ img {
 
 .top-section {
     width: 100%;
-    background-color: #ffffff;
-
+    background: #101f3d;
     position: relative;
     z-index: 1000;
-
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
 }
 
 .navbar {
     width: 90%;
     max-width: 1250px;
-    min-height: 78px;
-
     margin: auto;
+
+    min-height: 78px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-
-/* LOGO */
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
 .logo img {
-    width: 150px;
+    width: 105px;
     height: auto;
 }
 
-
-/* NAVIGATION */
-
 .navbar ul {
-    list-style: none;
-
     display: flex;
     align-items: center;
-
-    gap: 34px;
+    gap: 35px;
 }
 
 .navbar ul li a {
-    position: relative;
-
-    color: #101528;
-
+    color: #ffffff;
     font-size: 15px;
     font-weight: 500;
-
-    padding: 8px 0;
-
+    position: relative;
     transition: 0.3s ease;
 }
 
-
-/* NAVBAR UNDERLINE */
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #ff6b22;
+}
 
 .navbar ul li a::after {
     content: "";
-
     position: absolute;
 
     left: 0;
-    bottom: 0;
+    bottom: -8px;
 
     width: 0;
     height: 2px;
 
-    background-color: #009fe3;
+    background: #ff6b22;
 
     transition: 0.3s ease;
 }
 
-.navbar ul li a:hover {
-    color: #009fe3;
-}
-
-.navbar ul li a:hover::after {
-    width: 100%;
-}
-
-
-/* ACTIVE ABOUT LINK */
-
-.navbar ul li a.active {
-    color: #009fe3;
-}
-
+.navbar ul li a:hover::after,
 .navbar ul li a.active::after {
     width: 100%;
 }
@@ -137,65 +104,58 @@ img {
 ================================================== */
 
 .about-hero {
-    position: relative;
+    min-height: 500px;
 
-    width: 100%;
-    min-height: 520px;
+    position: relative;
 
     display: flex;
     align-items: center;
 
-    background-image:
-        url("./images/solar-cell-manufacturing.jpg");
+    background:
+        linear-gradient(
+            rgba(16, 31, 61, 0.68),
+            rgba(16, 31, 61, 0.72)
+        ),
+        url("https://chatgpt.com/backend-api/estuary/content?id=file_0000000051408208ab7c0b22e6a2e1b3&ts=497548&p=fs&cid=1&sig=f08f63b9a365b070e6b87f83d5cc99be4bd0286b52ef8d74ea1ee56e7b35eb2e&v=0");
 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
-
-
-/* HERO OVERLAY */
 
 .about-overlay {
     position: absolute;
 
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
+    inset: 0;
 
     background:
         linear-gradient(
             90deg,
-            rgba(7, 24, 50, 0.92) 0%,
-            rgba(7, 24, 50, 0.72) 45%,
-            rgba(7, 24, 50, 0.30) 100%
+            rgba(16, 31, 61, 0.85),
+            rgba(16, 31, 61, 0.35)
         );
 }
 
-
-/* HERO CONTENT */
-
 .about-hero-content {
-    position: relative;
-    z-index: 2;
-
     width: 90%;
-    max-width: 1200px;
+    max-width: 1250px;
 
     margin: auto;
 
+    position: relative;
+    z-index: 2;
+
     color: #ffffff;
+
+    padding: 80px 0;
 }
 
-.about-hero-content > span {
+.about-hero-content span {
     display: inline-block;
 
-    color: #ffb347;
+    color: #ff8a4c;
 
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
 
     letter-spacing: 2px;
 
@@ -203,12 +163,12 @@ img {
 }
 
 .about-hero-content h1 {
-    max-width: 720px;
+    max-width: 750px;
 
-    color: #ffffff;
+    font-size: clamp(38px, 5vw, 64px);
 
-    font-size: 55px;
     line-height: 1.15;
+
     font-weight: 700;
 
     margin-bottom: 22px;
@@ -217,336 +177,707 @@ img {
 .about-hero-content p {
     max-width: 650px;
 
-    color: #e2eaf3;
+    color: #eeeeee;
 
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 17px;
 }
 
 
 /* ==================================================
-   ABOUT THREE CARDS
+   COMMON SECTION HEADING
+================================================== */
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-heading span,
+.certificates-heading span,
+.values-content > span {
+    color: #ff6b22;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2,
+.certificates-heading h2,
+.values-content h2 {
+    color: #101f3d;
+
+    font-size: 38px;
+    line-height: 1.2;
+
+    margin: 10px 0 15px;
+}
+
+.section-heading p,
+.certificates-heading p,
+.values-content p {
+    color: #666666;
+
+    font-size: 15px;
+}
+
+
+/* ==================================================
+   COMPANY INTRODUCTION
+================================================== */
+
+.company-intro {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.intro-image {
+    position: relative;
+    width: 100%;
+    height: 430px;
+}
+
+.intro-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border: 3px solid #ff6b22;
+
+    left: 18px;
+    top: 18px;
+
+    z-index: -1;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 8px;
+
+    background: #f5f5f5;
+}
+
+.intro-content .section-tag {
+    color: #ff6b22;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.intro-content h2 {
+    color: #101f3d;
+
+    font-size: 42px;
+    line-height: 1.2;
+
+    margin: 12px 0 22px;
+}
+
+.intro-content p {
+    color: #666666;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+.intro-points {
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.intro-points div {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    font-weight: 600;
+
+    color: #101f3d;
+}
+
+.intro-points i {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff1e9;
+
+    color: #ff6b22;
+
+    border-radius: 50%;
+}
+
+
+/* ==================================================
+   STATS
+================================================== */
+
+.stats-section {
+    background: #101f3d;
+
+    padding: 55px 5%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.stat-box {
+    text-align: center;
+
+    color: #ffffff;
+
+    padding: 15px;
+}
+
+.stat-box i {
+    color: #ff6b22;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+.stat-box h2 {
+    font-size: 36px;
+
+    line-height: 1;
+
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    color: #d6dbe5;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   WHO WE ARE / VISION / MISSION
 ================================================== */
 
 .about-three-section {
     width: 90%;
     max-width: 1200px;
 
-    margin: -70px auto 100px;
+    margin: auto;
 
-    position: relative;
-    z-index: 5;
+    padding: 100px 0;
 
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
 }
 
-
-/* CARD */
-
 .about-card {
     position: relative;
 
-    min-height: 320px;
+    padding: 40px 35px;
 
-    padding: 42px 32px;
+    background: #ffffff;
 
-    background-color: #ffffff;
+    border: 1px solid #eeeeee;
 
-    border-radius: 16px;
+    border-radius: 8px;
 
-    border: 1px solid #edf0f4;
-
-    box-shadow:
-        0 15px 40px rgba(16, 31, 61, 0.10);
+    box-shadow: 0 10px 35px rgba(16, 31, 61, 0.07);
 
     overflow: hidden;
 
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+    transition: 0.3s ease;
 }
-
-
-/* CARD TOP BORDER */
-
-.about-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 4px;
-
-    background-color: #009fe3;
-}
-
-.about-card:nth-child(2)::before {
-    background-color: #ffb347;
-}
-
-.about-card:nth-child(3)::before {
-    background-color: #ff6b22;
-}
-
-
-/* CARD HOVER */
 
 .about-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 
-    box-shadow:
-        0 22px 50px rgba(16, 31, 61, 0.15);
+    box-shadow: 0 18px 45px rgba(16, 31, 61, 0.13);
 }
-
-
-/* CARD NUMBER */
 
 .card-number {
     position: absolute;
 
-    top: 15px;
     right: 25px;
-
-    color: #edf1f5;
+    top: 18px;
 
     font-size: 42px;
+
     font-weight: 700;
 
-    line-height: 1;
+    color: #f2f2f2;
 }
 
-
-/* CARD ICON */
-
 .card-icon {
-    width: 60px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 25px;
+    background: #fff1e9;
 
-    border-radius: 13px;
-
-    background-color: #eaf8ff;
-
-    color: #009fe3;
-
-    font-size: 28px;
-}
-
-.about-card:nth-child(2) .card-icon {
-    background-color: #fff8e9;
-    color: #e5a100;
-}
-
-.about-card:nth-child(3) .card-icon {
-    background-color: #fff0e8;
     color: #ff6b22;
+
+    border-radius: 50%;
+
+    font-size: 26px;
+
+    margin-bottom: 25px;
 }
-
-
-/* CARD TITLE */
 
 .about-card h2 {
     color: #101f3d;
 
-    font-size: 23px;
-    font-weight: 600;
+    font-size: 24px;
 
     margin-bottom: 15px;
 }
-
-
-/* CARD TEXT */
 
 .about-card p {
-    color: #687385;
+    color: #666666;
 
     font-size: 14px;
-    line-height: 1.9;
 }
 
 
 /* ==================================================
-   CERTIFICATES SECTION
+   WHY SUNGRID
 ================================================== */
 
-.certificates-section {
-    width: 100%;
+.why-sungrid {
+    background: #f7f9fc;
 
-    padding: 100px 0 120px;
-
-    background-color: #f5f9fc;
+    padding: 100px 5%;
 }
 
-
-/* CERTIFICATE HEADING */
-
-.certificates-heading {
-    width: 90%;
-    max-width: 800px;
-
-    margin: 0 auto 60px;
-
-    text-align: center;
-}
-
-.certificates-heading > span {
-    display: inline-block;
-
-    color: #009fe3;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 10px;
-}
-
-.certificates-heading h2 {
-    color: #101f3d;
-
-    font-size: 42px;
-    font-weight: 700;
-
-    margin-bottom: 15px;
-}
-
-.certificates-heading p {
-    color: #687385;
-
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-
-/* ==================================================
-   CERTIFICATE CONTAINER
-================================================== */
-
-.certificates-container {
-    width: 90%;
-    max-width: 1150px;
+.why-container {
+    max-width: 1200px;
 
     margin: auto;
 
     display: grid;
 
-    grid-template-columns:
-        repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
-    gap: 35px;
+    gap: 22px;
 }
 
+.why-card {
+    background: #ffffff;
 
-/* ==================================================
-   CERTIFICATE CARD
-================================================== */
+    padding: 35px 28px;
 
-.certificate-card {
-    background-color: #ffffff;
+    border-radius: 8px;
 
-    border-radius: 18px;
+    border: 1px solid #eeeeee;
 
-    overflow: hidden;
-
-    border: 1px solid #e4e9ef;
-
-    box-shadow:
-        0 12px 35px rgba(16, 31, 61, 0.08);
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+    transition: 0.3s ease;
 }
 
+.why-card:hover {
+    transform: translateY(-7px);
 
-/* HOVER */
-
-.certificate-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 22px 50px rgba(16, 31, 61, 0.15);
+    border-color: #ff6b22;
 }
 
-
-/* ==================================================
-   CERTIFICATE IMAGE
-================================================== */
-
-.certificate-image {
-    width: 100%;
-    height: 430px;
-
-    padding: 30px;
-
-    background-color: #ffffff;
+.why-icon {
+    width: 55px;
+    height: 55px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background: #fff1e9;
+
+    color: #ff6b22;
+
+    border-radius: 50%;
+
+    margin-bottom: 20px;
+
+    font-size: 21px;
+}
+
+.why-card h3 {
+    color: #101f3d;
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #666666;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   OUR PROCESS
+================================================== */
+
+.process-section {
+    padding: 100px 5%;
+
+    background: #ffffff;
+}
+
+.process-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.process-card {
+    text-align: center;
+
+    padding: 35px 25px;
+
+    position: relative;
+}
+
+.process-number {
+    position: absolute;
+
+    top: 5px;
+    right: 15px;
+
+    color: #eeeeee;
+
+    font-size: 40px;
+
+    font-weight: 700;
+}
+
+.process-card > i {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto auto 20px;
+
+    background: #101f3d;
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+.process-card h3 {
+    color: #101f3d;
+
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    color: #666666;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   VALUES
+================================================== */
+
+.values-section {
+    background: #f7f9fc;
+
+    padding: 100px 5%;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.values-content {
+    max-width: 500px;
+}
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.value-item {
+    background: #ffffff;
+
+    padding: 25px;
+
+    display: flex;
+
+    gap: 18px;
+
+    border-radius: 8px;
+
+    border: 1px solid #eeeeee;
+}
+
+.value-item > i {
+    color: #ff6b22;
+
+    font-size: 25px;
+
+    margin-top: 4px;
+}
+
+.value-item h3 {
+    color: #101f3d;
+
+    font-size: 18px;
+
+    margin-bottom: 7px;
+}
+
+.value-item p {
+    color: #666666;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   CERTIFICATES
+================================================== */
+
+.certificates-section {
+    padding: 100px 5%;
+
+    background: #ffffff;
+}
+
+.certificates-heading {
+    max-width: 750px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.certificates-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.certificate-card {
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 10px 30px rgba(16, 31, 61, 0.07);
+
+    transition: 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 40px rgba(16, 31, 61, 0.13);
+}
+
+.certificate-image {
+    width: 100%;
+    height: 260px;
+
+    background: #f5f5f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
 }
 
 .certificate-image img {
     width: 100%;
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
-    transition: transform 0.4s ease;
+    transition: 0.4s ease;
 }
-
-
-/* IMAGE HOVER */
 
 .certificate-card:hover .certificate-image img {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
-
-/* ==================================================
-   CERTIFICATE INFORMATION
-================================================== */
-
 .certificate-info {
-    padding: 25px 30px 30px;
-
-    border-top: 1px solid #edf0f4;
+    padding: 25px;
 }
 
 .certificate-info span {
-    display: block;
-
-    color: #009fe3;
+    color: #ff6b22;
 
     font-size: 11px;
+
     font-weight: 700;
 
     letter-spacing: 1.5px;
-
-    margin-bottom: 8px;
 }
 
 .certificate-info h3 {
     color: #101f3d;
 
-    font-size: 20px;
+    font-size: 19px;
+
+    margin-top: 8px;
+}
+
+
+/* ==================================================
+   CALL TO ACTION
+================================================== */
+
+.about-cta {
+    padding: 90px 5%;
+
+    background:
+        linear-gradient(
+            rgba(16, 31, 61, 0.90),
+            rgba(16, 31, 61, 0.90)
+        ),
+        url("./images/about-solar.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.cta-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.cta-content span {
+    color: #ff8a4c;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.cta-content h2 {
+    font-size: 40px;
+
+    line-height: 1.2;
+
+    margin: 12px 0 18px;
+}
+
+.cta-content p {
+    color: #dddddd;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 28px;
+
+    background: #ff6b22;
+
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
     font-weight: 600;
 
-    line-height: 1.4;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e85a15;
+
+    transform: translateY(-2px);
 }
 
 
@@ -555,17 +886,10 @@ img {
 ================================================== */
 
 footer {
-    width: 100%;
-
-    background-color: #071426;
+    background: #0c172d;
 
     color: #ffffff;
-
-    padding-top: 60px;
 }
-
-
-/* FOOTER CONTENT */
 
 .footer-content {
     width: 90%;
@@ -573,97 +897,80 @@ footer {
 
     margin: auto;
 
-    padding-bottom: 50px;
+    padding: 70px 0 50px;
 
     display: grid;
 
-    grid-template-columns:
-        2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
 
-    gap: 70px;
+    gap: 60px;
 }
 
-
-/* FOOTER LOGO */
-
 .footer-logo img {
-    width: 145px;
+    width: 110px;
 
     margin-bottom: 18px;
 }
 
 .footer-logo p {
-    max-width: 330px;
+    max-width: 300px;
 
-    color: #aeb9c8;
+    color: #aeb6c5;
 
-    font-size: 13px;
-    line-height: 1.8;
+    font-size: 14px;
 }
-
-
-/* FOOTER HEADINGS */
-
-.footer-content h3 {
-    color: #ffffff;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    margin-bottom: 20px;
-}
-
-
-/* FOOTER LINKS */
 
 .footer-links {
     display: flex;
+
     flex-direction: column;
 
     gap: 10px;
 }
 
-.footer-links a {
-    color: #aeb9c8;
+.footer-links h3,
+.footer-contact h3 {
+    color: #ffffff;
 
-    font-size: 13px;
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #aeb6c5;
+
+    font-size: 14px;
 
     transition: 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #009fe3;
+    color: #ff6b22;
+
+    padding-left: 4px;
 }
 
-
-/* FOOTER CONTACT */
-
 .footer-contact p {
-    color: #aeb9c8;
+    color: #aeb6c5;
 
-    font-size: 13px;
+    font-size: 14px;
+
     line-height: 1.8;
 }
 
-
-/* ==================================================
-   FOOTER BOTTOM
-================================================== */
-
 .footer-bottom {
-    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px 5%;
 
     text-align: center;
-
-    padding: 20px;
 }
 
 .footer-bottom p {
-    color: #8794a6;
+    color: #8993a6;
 
-    font-size: 12px;
+    font-size: 13px;
 }
 
 
@@ -673,49 +980,29 @@ footer {
 
 @media (max-width: 1000px) {
 
-    /* NAVBAR */
-
     .navbar ul {
         gap: 20px;
     }
 
-
-    /* HERO */
-
-    .about-hero-content h1 {
-        font-size: 46px;
+    .company-intro {
+        gap: 40px;
     }
 
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-    /* ABOUT CARDS */
+    .why-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-    .about-three-section {
+    .process-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-section {
         grid-template-columns: 1fr;
-
-        max-width: 700px;
-
-        margin-top: -50px;
-    }
-
-    .about-card {
-        min-height: auto;
-    }
-
-
-    /* CERTIFICATES */
-
-    .certificates-container {
-        max-width: 700px;
-
-        grid-template-columns: 1fr;
-    }
-
-
-    /* FOOTER */
-
-    .footer-content {
-        grid-template-columns:
-            1fr 1fr;
+        gap: 45px;
     }
 
 }
@@ -725,25 +1012,16 @@ footer {
    MOBILE
 ================================================== */
 
-@media (max-width: 650px) {
-
-
-    /* ==============================================
-       NAVBAR
-    ============================================== */
+@media (max-width: 768px) {
 
     .navbar {
-        min-height: 70px;
+        width: 92%;
 
         flex-direction: column;
 
-        padding: 12px 0;
+        gap: 18px;
 
-        gap: 10px;
-    }
-
-    .logo img {
-        width: 125px;
+        padding: 18px 0;
     }
 
     .navbar ul {
@@ -751,134 +1029,143 @@ footer {
 
         justify-content: center;
 
-        gap: 12px;
-
         flex-wrap: wrap;
+
+        gap: 15px 20px;
     }
 
     .navbar ul li a {
-        font-size: 11px;
+        font-size: 13px;
     }
 
 
-    /* ==============================================
-       HERO
-    ============================================== */
+    /* Hero */
 
     .about-hero {
-        min-height: 470px;
-
-        background-position: center;
+        min-height: 450px;
     }
 
     .about-hero-content {
         text-align: center;
     }
 
-    .about-hero-content > span {
-        font-size: 11px;
-    }
-
     .about-hero-content h1 {
-        font-size: 35px;
-
-        line-height: 1.2;
+        font-size: 38px;
     }
 
     .about-hero-content p {
         font-size: 14px;
-
-        line-height: 1.7;
     }
 
 
-    /* ==============================================
-       THREE ABOUT CARDS
-    ============================================== */
+    /* Introduction */
+
+    .company-intro {
+        grid-template-columns: 1fr;
+
+        padding: 70px 0;
+
+        gap: 55px;
+    }
+
+    .intro-image {
+        height: 350px;
+    }
+
+    .intro-image img {
+        height: 100%;
+    }
+
+    .intro-content h2 {
+        font-size: 34px;
+    }
+
+
+    /* Three cards */
 
     .about-three-section {
-        width: 88%;
+        grid-template-columns: 1fr;
 
-        margin-top: -30px;
-        margin-bottom: 70px;
-
-        gap: 20px;
-    }
-
-    .about-card {
-        padding: 32px 25px;
-    }
-
-    .card-number {
-        font-size: 35px;
-    }
-
-    .about-card h2 {
-        font-size: 21px;
-    }
-
-    .about-card p {
-        font-size: 13px;
+        padding: 70px 0;
     }
 
 
-    /* ==============================================
-       CERTIFICATES
-    ============================================== */
+    /* Stats */
+
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 45px 5%;
+    }
+
+    .stat-box h2 {
+        font-size: 30px;
+    }
+
+
+    /* Why */
+
+    .why-sungrid {
+        padding: 70px 5%;
+    }
+
+    .why-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Process */
+
+    .process-section {
+        padding: 70px 5%;
+    }
+
+    .process-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Values */
+
+    .values-section {
+        padding: 70px 5%;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Certificates */
 
     .certificates-section {
-        padding: 70px 0 80px;
-    }
-
-    .certificates-heading {
-        margin-bottom: 40px;
-    }
-
-    .certificates-heading > span {
-        font-size: 11px;
-    }
-
-    .certificates-heading h2 {
-        font-size: 31px;
-    }
-
-    .certificates-heading p {
-        font-size: 13px;
+        padding: 70px 5%;
     }
 
     .certificates-container {
-        width: 88%;
-
-        gap: 25px;
-    }
-
-    .certificate-image {
-        height: 300px;
-
-        padding: 20px;
-    }
-
-    .certificate-info {
-        padding: 20px 22px 25px;
-    }
-
-    .certificate-info h3 {
-        font-size: 17px;
+        grid-template-columns: 1fr;
     }
 
 
-    /* ==============================================
-       FOOTER
-    ============================================== */
+    /* CTA */
 
-    footer {
-        padding-top: 45px;
+    .about-cta {
+        padding: 70px 5%;
     }
+
+    .cta-content h2 {
+        font-size: 32px;
+    }
+
+
+    /* Footer */
 
     .footer-content {
         grid-template-columns: 1fr;
 
         gap: 35px;
+
+        padding: 55px 0 40px;
     }
 
 }
@@ -888,41 +1175,56 @@ footer {
    SMALL MOBILE
 ================================================== */
 
-@media (max-width: 400px) {
-
-    /* NAVIGATION */
+@media (max-width: 480px) {
 
     .navbar ul {
-        gap: 9px;
+        gap: 12px 14px;
     }
 
     .navbar ul li a {
-        font-size: 10px;
+        font-size: 12px;
     }
 
-
-    /* HERO */
-
     .about-hero-content h1 {
+        font-size: 31px;
+    }
+
+    .about-hero-content span {
+        font-size: 11px;
+    }
+
+    .company-intro {
+        width: 88%;
+    }
+
+    .intro-image {
+        height: 280px;
+    }
+
+    .intro-image img {
+        height: 100%;
+    }
+
+    .intro-content h2 {
+        font-size: 29px;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .certificates-heading h2,
+    .values-content h2 {
         font-size: 30px;
     }
 
-
-    /* CARDS */
-
-    .about-card {
-        padding: 28px 22px;
-    }
-
-
-    /* CERTIFICATES */
-
-    .certificates-heading h2 {
-        font-size: 28px;
-    }
-
     .certificate-image {
-        height: 250px;
+        height: 220px;
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
     }
 
 }

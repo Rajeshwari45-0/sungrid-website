@@ -19,17 +19,116 @@
 
     <link rel="stylesheet" href="./style.css">
 
+
+    <!-- CATEGORY SECTION CSS ONLY -->
+
+    <style>
+
+        .products-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+
+        /* CATEGORY SIDEBAR */
+
+        .category-sidebar {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+            position: sticky;
+            top: 100px;
+        }
+
+
+        .category-title {
+            background: #007bff;
+            color: #ffffff;
+            padding: 18px 20px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+
+        .category-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .category-list li {
+            border-bottom: 1px solid #eeeeee;
+        }
+
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+
+        .category-list a {
+            display: block;
+            padding: 14px 18px;
+            color: #333333;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+
+        .category-list a:hover {
+            background: #e8f2ff;
+            color: #007bff;
+        }
+
+
+        /* CURRENT PAGE */
+
+        .category-list a.active-category {
+            background: #e8f2ff;
+            color: #007bff;
+            font-weight: 700;
+            border-left: 4px solid #007bff;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+
+            .products-layout {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .category-sidebar {
+                position: static;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
 
+<!-- ==============================
+     NAVBAR
+============================== -->
+
 <header class="top-section">
 
     <nav class="navbar">
 
-        <a href="./test.html" class="logo">
+        <a href="./index.html" class="logo">
 
             <img
                 src="./images/logo.png"
@@ -42,7 +141,7 @@
         <ul>
 
             <li>
-                <a href="./test.html">
+                <a href="./index.html">
                     Home
                 </a>
             </li>
@@ -79,6 +178,10 @@
 
 
 
+<!-- ==============================
+     PAGE HEADER
+============================== -->
+
 <section class="catalog-header">
 
     <span class="catalog-label">
@@ -97,130 +200,210 @@
 
 
 
+<!-- ==============================
+     PRODUCTS SECTION
+============================== -->
+
 <section class="products-section single-category">
 
 
-    <div class="category-products">
+    <div class="products-layout">
 
 
-        <!-- HEATER 1 -->
+        <!-- ==============================
+             CATEGORY SIDEBAR
+        ============================== -->
 
-        <article class="product-card">
+        <aside class="category-sidebar">
 
-            <div class="product-image">
-
-                <img
-                    src="https://5.imimg.com/data5/SELLER/Default/2024/1/377152292/MR/XO/QN/109071444/supreme-solar-100-lpd-solar-water-heater-1000x1000.jpg"
-                    alt="Solar Water Heater 100 LPD"
-                >
-
+            <div class="category-title">
+                SOLAR ENERGY
             </div>
 
 
-            <div class="product-info">
+            <ul class="category-list">
 
-                <h2>
-                    Solar Water Heater 100 LPD
-                </h2>
-
-                <p>
-                    A compact solar water heating solution
-                    suitable for smaller households.
-                </p>
-
-                <a
-                    href="#enquiry"
-                    class="view-product"
-                >
-                    ENQUIRE NOW →
-                </a>
-
-            </div>
-
-        </article>
+                <li>
+                    <a href="./solar-street-light.html">
+                        Solar Street Lights
+                    </a>
+                </li>
 
 
-
-        <!-- HEATER 2 -->
-
-        <article class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="https://tse2.mm.bing.net/th/id/OIP.zo1R5OWk_wh99A31T_c7zAHaFI?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-                    alt="Solar Water Heater 200 LPD"
-                >
-
-            </div>
+                <li>
+                    <a href="./solar-water-pumps.html">
+                        Solar Water Pumps
+                    </a>
+                </li>
 
 
-            <div class="product-info">
+                <li>
+                    <a
+                        href="./solar-water-heater.html"
+                        class="active-category"
+                    >
+                        Solar Water Heater
+                    </a>
+                </li>
 
-                <h2>
-                    Solar Water Heater 200 LPD
-                </h2>
 
-                <p>
-                    Suitable for medium-sized homes and
-                    regular hot-water requirements.
-                </p>
+                <li>
+                    <a href="./solar-garden-lights.html">
+                        Solar Garden Lights
+                    </a>
+                </li>
 
-                <a
-                    href="#enquiry"
-                    class="view-product"
-                >
-                    ENQUIRE NOW →
-                </a>
 
-            </div>
+                <li>
+                    <a href="./solar-flood-lights.html">
+                        Solar Flood Lights
+                    </a>
+                </li>
 
-        </article>
+
+                <li>
+                    <a href="./solar-inverter.html">
+                        Solar Inverter
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
 
 
 
-        <!-- HEATER 3 -->
+        <!-- ==============================
+             EXISTING PRODUCTS
+        ============================== -->
 
-        <article class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="https://5.imimg.com/data5/SELLER/Default/2023/11/363234306/PB/EA/IJ/26249359/300-lpd-solar-water-heater-500x500.jpg"
-                    alt="Solar Water Heater 300 LPD"
-                >
-
-            </div>
+        <div class="category-products">
 
 
-            <div class="product-info">
+            <!-- HEATER 1 -->
 
-                <h2>
-                    Solar Water Heater 300 LPD
-                </h2>
+            <article class="product-card">
 
-                <p>
-                    Higher-capacity solar water heating
-                    solution for larger households and establishments.
-                </p>
+                <div class="product-image">
 
-                <a
-                    href="#enquiry"
-                    class="view-product"
-                >
-                    ENQUIRE NOW →
-                </a>
+                    <img
+                        src="https://5.imimg.com/data5/SELLER/Default/2024/1/377152292/MR/XO/QN/109071444/supreme-solar-100-lpd-solar-water-heater-1000x1000.jpg"
+                        alt="Solar Water Heater 100 LPD"
+                    >
 
-            </div>
+                </div>
 
-        </article>
 
+                <div class="product-info">
+
+                    <h2>
+                        Solar Water Heater 100 LPD
+                    </h2>
+
+                    <p>
+                        A compact solar water heating solution
+                        suitable for smaller households.
+                    </p>
+
+                    <a
+                        href="#enquiry"
+                        class="view-product"
+                    >
+                        ENQUIRE NOW →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- HEATER 2 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://tse2.mm.bing.net/th/id/OIP.zo1R5OWk_wh99A31T_c7zAHaFI?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="Solar Water Heater 200 LPD"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h2>
+                        Solar Water Heater 200 LPD
+                    </h2>
+
+                    <p>
+                        Suitable for medium-sized homes and
+                        regular hot-water requirements.
+                    </p>
+
+                    <a
+                        href="#enquiry"
+                        class="view-product"
+                    >
+                        ENQUIRE NOW →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- HEATER 3 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://5.imimg.com/data5/SELLER/Default/2023/11/363234306/PB/EA/IJ/26249359/300-lpd-solar-water-heater-500x500.jpg"
+                        alt="Solar Water Heater 300 LPD"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h2>
+                        Solar Water Heater 300 LPD
+                    </h2>
+
+                    <p>
+                        Higher-capacity solar water heating
+                        solution for larger households and establishments.
+                    </p>
+
+                    <a
+                        href="#enquiry"
+                        class="view-product"
+                    >
+                        ENQUIRE NOW →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
 
     </div>
 
 </section>
 
 
+
+<!-- ==============================
+     ENQUIRY SECTION
+============================== -->
 
 <section class="enquiry-section" id="enquiry">
 

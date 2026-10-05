@@ -12,12 +12,1166 @@
 
     <title>Global Market | SunGrid</title>
 
+    <!-- Google Font -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
     <link rel="stylesheet" href="./style.css">
+
+
+    <style>
+
+        /* =========================================================
+           GLOBAL MARKET PAGE
+        ========================================================= */
+
+        :root {
+            --blue: #007bff;
+            --dark-blue: #0056b3;
+            --light-blue: #eaf4ff;
+            --deep: #071b35;
+            --text: #26364a;
+            --muted: #68778a;
+            --white: #ffffff;
+            --border: #e5edf5;
+            --shadow: 0 15px 45px rgba(13, 58, 105, 0.10);
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f7faff;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        .top-section {
+            position: relative;
+            z-index: 1000;
+        }
+
+
+        .navbar {
+            width: 100%;
+            min-height: 78px;
+            padding: 12px 6%;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(15px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+
+        .navbar .logo img {
+            width: 145px;
+            display: block;
+        }
+
+
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+        .navbar ul li a {
+            position: relative;
+            display: block;
+            padding: 10px 17px;
+            color: #25364b;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+
+        .navbar ul li a::after {
+            content: "";
+            position: absolute;
+            left: 17px;
+            right: 17px;
+            bottom: 3px;
+            height: 2px;
+            background: var(--blue);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: 0.3s ease;
+        }
+
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active {
+            color: var(--blue);
+        }
+
+
+        .navbar ul li a:hover::after,
+        .navbar ul li a.active::after {
+            transform: scaleX(1);
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .global-hero {
+            min-height: 650px;
+            padding: 80px 7%;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(70, 170, 255, 0.25),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    135deg,
+                    #03152d,
+                    #063b75 55%,
+                    #007bff
+                );
+        }
+
+
+        .global-hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50%;
+            right: -180px;
+            top: -150px;
+        }
+
+
+        .global-hero::after {
+            content: "";
+            position: absolute;
+            width: 750px;
+            height: 750px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 50%;
+            right: -350px;
+            top: -270px;
+        }
+
+
+        .global-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+
+
+        .global-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.20);
+            color: #dff0ff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+
+
+        .global-label::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            background: #54d7ff;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #54d7ff;
+        }
+
+
+        .global-hero h1 {
+            margin: 0 0 22px;
+            color: white;
+            font-size: clamp(44px, 5vw, 74px);
+            line-height: 1.05;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+
+        .global-hero h1 span {
+            display: inline-block;
+            background: linear-gradient(
+                90deg,
+                #70dcff,
+                #ffffff
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .global-hero p {
+            max-width: 570px;
+            margin: 0 0 32px;
+            color: #d5e7fa;
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+
+        .global-primary-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            background: white;
+            color: var(--blue);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: 0.3s ease;
+        }
+
+
+        .global-primary-btn::after {
+            content: "→";
+            font-size: 19px;
+            transition: 0.3s ease;
+        }
+
+
+        .global-primary-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+
+        .global-primary-btn:hover::after {
+            transform: translateX(5px);
+        }
+
+
+        /* HERO IMAGE */
+
+        .global-hero-image {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .global-hero-image::before {
+            content: "";
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 50%;
+            animation: rotateGlobe 20s linear infinite;
+        }
+
+
+        .global-hero-image::after {
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border: 1px dashed rgba(255,255,255,0.18);
+            border-radius: 50%;
+            animation: rotateGlobeReverse 15s linear infinite;
+        }
+
+
+        .global-hero-image img {
+            position: relative;
+            z-index: 3;
+            width: min(100%, 520px);
+            height: 400px;
+            object-fit: cover;
+            border-radius: 28px;
+            border: 7px solid rgba(255,255,255,0.13);
+            box-shadow:
+                0 25px 70px rgba(0,0,0,0.28),
+                0 0 60px rgba(66,180,255,0.15);
+            animation: heroFloat 5s ease-in-out infinite;
+        }
+
+
+        @keyframes heroFloat {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+        }
+
+
+        @keyframes rotateGlobe {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+
+        @keyframes rotateGlobeReverse {
+
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0deg);
+            }
+
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .global-intro {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 110px 25px 80px;
+            text-align: center;
+        }
+
+
+        .section-label {
+            display: inline-block;
+            margin-bottom: 13px;
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+
+        .global-intro h2,
+        .global-section-heading h2 {
+            margin: 0 0 18px;
+            color: var(--deep);
+            font-size: clamp(30px, 4vw, 45px);
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+
+        .global-intro p,
+        .global-section-heading p {
+            margin: 0 auto;
+            max-width: 720px;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================================
+           COMMON SECTION
+        ========================================================= */
+
+        .global-presence,
+        .global-products,
+        .global-applications,
+        .global-process {
+            padding: 100px 7%;
+        }
+
+
+        .global-presence {
+            background: white;
+        }
+
+
+        .global-section-heading {
+            max-width: 760px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+
+        /* =========================================================
+           REGION CARDS
+        ========================================================= */
+
+        .region-grid {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+
+        .region-card {
+            position: relative;
+            padding: 32px 25px;
+            min-height: 300px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: #fff;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.35s ease;
+        }
+
+
+        .region-card::before {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--light-blue);
+            right: -45px;
+            top: -45px;
+            transition: 0.35s ease;
+        }
+
+
+        .region-card:hover {
+            transform: translateY(-10px);
+            border-color: #b9ddff;
+            box-shadow: 0 22px 50px rgba(0, 108, 220, 0.15);
+        }
+
+
+        .region-card:hover::before {
+            transform: scale(1.5);
+        }
+
+
+        .region-icon {
+            position: relative;
+            width: 62px;
+            height: 62px;
+            margin-bottom: 24px;
+            border-radius: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(
+                135deg,
+                #e9f5ff,
+                #cce8ff
+            );
+            color: var(--blue);
+            font-size: 28px;
+            box-shadow: 0 8px 20px rgba(0,123,255,0.10);
+        }
+
+
+        .region-card h3 {
+            position: relative;
+            margin: 0 0 12px;
+            color: var(--deep);
+            font-size: 21px;
+        }
+
+
+        .region-card p {
+            position: relative;
+            margin: 0 0 25px;
+            color: var(--muted);
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+
+        .region-link {
+            position: relative;
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           PRODUCTS
+        ========================================================= */
+
+        .global-products {
+            background: #f4f8fd;
+        }
+
+
+        .global-product-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+
+        .global-product-card {
+            position: relative;
+            padding: 38px 30px;
+            background: white;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: 0.35s ease;
+        }
+
+
+        .global-product-card::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(
+                90deg,
+                var(--blue),
+                #48c9ff
+            );
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.35s ease;
+        }
+
+
+        .global-product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 22px 50px rgba(0, 80, 160, 0.14);
+        }
+
+
+        .global-product-card:hover::after {
+            transform: scaleX(1);
+        }
+
+
+        .global-product-number {
+            margin-bottom: 25px;
+            color: #c9d9e9;
+            font-size: 38px;
+            line-height: 1;
+            font-weight: 800;
+        }
+
+
+        .global-product-card h3 {
+            margin: 0 0 14px;
+            color: var(--deep);
+            font-size: 21px;
+        }
+
+
+        .global-product-card p {
+            margin: 0 0 25px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+
+        .global-product-card a {
+            color: var(--blue);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+
+        .global-product-card a:hover {
+            color: var(--dark-blue);
+        }
+
+
+        /* =========================================================
+           APPLICATIONS
+        ========================================================= */
+
+        .global-applications {
+            background: white;
+        }
+
+
+        .application-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+
+        .application-card {
+            position: relative;
+            padding: 30px 25px;
+            min-height: 230px;
+            border-radius: 18px;
+            background: linear-gradient(
+                145deg,
+                #071c35,
+                #0b315a
+            );
+            overflow: hidden;
+            transition: 0.35s ease;
+        }
+
+
+        .application-card::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            right: -70px;
+            bottom: -70px;
+            border-radius: 50%;
+            background: rgba(0,123,255,0.35);
+        }
+
+
+        .application-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 38, 80, 0.25);
+        }
+
+
+        .application-card > span {
+            color: #54cfff;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+
+        .application-card h3 {
+            position: relative;
+            margin: 25px 0 12px;
+            color: white;
+            font-size: 19px;
+        }
+
+
+        .application-card p {
+            position: relative;
+            margin: 0;
+            color: #b9cee3;
+            font-size: 13px;
+            line-height: 1.75;
+        }
+
+
+        /* =========================================================
+           WHY SUNGRID
+        ========================================================= */
+
+        .global-why {
+            padding: 110px 7%;
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf6ff,
+                    #ffffff
+                );
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+
+        .global-why-content {
+            max-width: 550px;
+        }
+
+
+        .global-why-content h2 {
+            margin: 0 0 20px;
+            color: var(--deep);
+            font-size: clamp(31px, 4vw, 46px);
+            line-height: 1.2;
+            font-weight: 800;
+        }
+
+
+        .global-why-content p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.9;
+        }
+
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+
+        .why-item {
+            padding: 28px;
+            background: white;
+            border-radius: 17px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s ease;
+        }
+
+
+        .why-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0,100,200,0.12);
+        }
+
+
+        .why-item strong {
+            display: block;
+            margin-bottom: 17px;
+            color: #a9cbed;
+            font-size: 27px;
+        }
+
+
+        .why-item h3 {
+            margin: 0 0 9px;
+            color: var(--deep);
+            font-size: 18px;
+        }
+
+
+        .why-item p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           PROCESS
+        ========================================================= */
+
+        .global-process {
+            background: white;
+        }
+
+
+        .process-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+
+        .process-item {
+            position: relative;
+            padding: 15px 10px 10px 0;
+        }
+
+
+        .process-item::after {
+            content: "";
+            position: absolute;
+            top: 43px;
+            left: 78px;
+            width: calc(100% - 50px);
+            height: 1px;
+            background: #cfe2f5;
+        }
+
+
+        .process-item:last-child::after {
+            display: none;
+        }
+
+
+        .process-number {
+            position: relative;
+            z-index: 2;
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            border-radius: 50%;
+            background: linear-gradient(
+                135deg,
+                var(--blue),
+                #42bfff
+            );
+            color: white;
+            font-size: 13px;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(0,123,255,0.25);
+        }
+
+
+        .process-item h3 {
+            margin: 0 0 10px;
+            color: var(--deep);
+            font-size: 18px;
+        }
+
+
+        .process-item p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.7;
+            max-width: 230px;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .global-cta {
+            position: relative;
+            padding: 100px 25px;
+            text-align: center;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 50% -20%,
+                    rgba(91,190,255,0.35),
+                    transparent 40%
+                ),
+                linear-gradient(
+                    135deg,
+                    #04162d,
+                    #07569b
+                );
+        }
+
+
+        .global-cta::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 50%;
+            left: -230px;
+            bottom: -300px;
+        }
+
+
+        .global-cta .section-label {
+            color: #6ed7ff;
+        }
+
+
+        .global-cta h2 {
+            position: relative;
+            max-width: 750px;
+            margin: 0 auto 18px;
+            color: white;
+            font-size: clamp(32px, 4vw, 50px);
+            line-height: 1.2;
+            font-weight: 800;
+        }
+
+
+        .global-cta p {
+            position: relative;
+            max-width: 650px;
+            margin: 0 auto 32px;
+            color: #c6ddf2;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+
+        .global-cta-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 27px;
+            border-radius: 10px;
+            background: white;
+            color: var(--blue);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 800;
+            transition: 0.3s ease;
+        }
+
+
+        .global-cta-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+
+        /* =========================================================
+           FLOATING WHATSAPP
+        ========================================================= */
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 2000;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            font-size: 27px;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.35);
+            transition: 0.3s ease;
+        }
+
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(37,211,102,0.5);
+        }
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1100px) {
+
+            .global-hero {
+                padding: 70px 5%;
+            }
+
+            .region-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .application-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .global-why {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 45px;
+            }
+
+            .process-item::after {
+                display: none;
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            .navbar {
+                padding: 12px 4%;
+            }
+
+            .navbar ul {
+                gap: 0;
+            }
+
+            .navbar ul li a {
+                padding: 9px 9px;
+                font-size: 12px;
+            }
+
+            .global-hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                min-height: auto;
+                padding: 75px 6%;
+            }
+
+            .global-hero-content {
+                margin: auto;
+            }
+
+            .global-hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .global-hero-image {
+                margin-top: 20px;
+            }
+
+            .global-hero-image img {
+                height: 330px;
+            }
+
+            .global-product-grid {
+                grid-template-columns: 1fr;
+                max-width: 650px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar .logo img {
+                width: 125px;
+            }
+
+            .navbar ul {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .navbar ul li a {
+                padding: 7px 7px;
+                font-size: 11px;
+            }
+
+            .global-hero {
+                padding: 60px 20px;
+            }
+
+            .global-hero h1 {
+                font-size: 43px;
+                letter-spacing: -1px;
+            }
+
+            .global-hero p {
+                font-size: 14px;
+            }
+
+            .global-hero-image::before,
+            .global-hero-image::after {
+                display: none;
+            }
+
+            .global-hero-image img {
+                width: 100%;
+                height: 260px;
+                border-radius: 20px;
+            }
+
+            .global-intro,
+            .global-presence,
+            .global-products,
+            .global-applications,
+            .global-process,
+            .global-why {
+                padding: 70px 20px;
+            }
+
+            .region-grid,
+            .application-grid,
+            .process-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .region-card {
+                min-height: auto;
+            }
+
+            .global-why {
+                gap: 40px;
+            }
+
+            .global-cta {
+                padding: 75px 20px;
+            }
+
+            .global-cta h2 {
+                font-size: 34px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -25,26 +1179,28 @@
 <body>
 
 
-<!-- =================================================
+<!-- =========================================================
      NAVBAR
-================================================= -->
+========================================================= -->
 
 <header class="top-section">
 
     <nav class="navbar">
 
-        <a href="./test.html" class="logo">
+        <a href="./index.html" class="logo">
+
             <img
                 src="./images/logo.png"
                 alt="SunGrid Logo"
             >
+
         </a>
 
 
         <ul>
 
             <li>
-                <a href="./test.html">
+                <a href="index.html">
                     Home
                 </a>
             </li>
@@ -56,13 +1212,16 @@
             </li>
 
             <li>
-                <a href="./product.html">
+                <a href="./products.html">
                     Products
                 </a>
             </li>
 
             <li>
-                <a href="./global-market.html" class="active">
+                <a
+                    href="./global-market.html"
+                    class="active"
+                >
                     Global Market
                 </a>
             </li>
@@ -81,9 +1240,9 @@
 
 
 
-<!-- =================================================
-     GLOBAL MARKET HERO
-================================================= -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="global-hero">
 
@@ -93,17 +1252,20 @@
             GLOBAL MARKET
         </span>
 
+
         <h1>
             Powering a
             <span>Brighter</span>
             Global Future
         </h1>
 
+
         <p>
             SunGrid delivers dependable solar solutions
             designed for diverse markets, climates and
             energy requirements.
         </p>
+
 
         <a
             href="#global-presence"
@@ -113,6 +1275,7 @@
         </a>
 
     </div>
+
 
     <div class="global-hero-image">
 
@@ -127,19 +1290,21 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      INTRODUCTION
-================================================= -->
+========================================================= -->
 
-<section class="global-intro">
+<section class="global-intro reveal">
 
     <span class="section-label">
         OUR GLOBAL REACH
     </span>
 
+
     <h2>
         Solar Solutions Without Borders
     </h2>
+
 
     <p>
         The demand for clean and reliable energy continues
@@ -153,24 +1318,26 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      GLOBAL PRESENCE
-================================================= -->
+========================================================= -->
 
 <section
     class="global-presence"
     id="global-presence"
 >
 
-    <div class="global-section-heading">
+    <div class="global-section-heading reveal">
 
         <span class="section-label">
             MARKET PRESENCE
         </span>
 
+
         <h2>
             Serving Diverse Markets
         </h2>
+
 
         <p>
             Our solar solutions can be adapted to different
@@ -184,12 +1351,12 @@
     <div class="region-grid">
 
 
-        <!-- REGION 1 -->
+        <!-- ASIA -->
 
-        <div class="region-card">
+        <div class="region-card reveal">
 
             <div class="region-icon">
-                🌍
+                <i class="fa-solid fa-earth-asia"></i>
             </div>
 
             <h3>
@@ -210,12 +1377,12 @@
 
 
 
-        <!-- REGION 2 -->
+        <!-- MIDDLE EAST -->
 
-        <div class="region-card">
+        <div class="region-card reveal">
 
             <div class="region-icon">
-                ☀
+                <i class="fa-solid fa-sun"></i>
             </div>
 
             <h3>
@@ -236,12 +1403,12 @@
 
 
 
-        <!-- REGION 3 -->
+        <!-- AFRICA -->
 
-        <div class="region-card">
+        <div class="region-card reveal">
 
             <div class="region-icon">
-                🌍
+                <i class="fa-solid fa-earth-africa"></i>
             </div>
 
             <h3>
@@ -262,12 +1429,12 @@
 
 
 
-        <!-- REGION 4 -->
+        <!-- INTERNATIONAL -->
 
-        <div class="region-card">
+        <div class="region-card reveal">
 
             <div class="region-icon">
-                🌐
+                <i class="fa-solid fa-globe"></i>
             </div>
 
             <h3>
@@ -292,21 +1459,23 @@
 
 
 
-<!-- =================================================
-     PRODUCT CATEGORIES
-================================================= -->
+<!-- =========================================================
+     PRODUCTS
+========================================================= -->
 
 <section class="global-products">
 
-    <div class="global-section-heading">
+    <div class="global-section-heading reveal">
 
         <span class="section-label">
             OUR SOLUTIONS
         </span>
 
+
         <h2>
             Solar Products for Global Applications
         </h2>
+
 
         <p>
             Our product range is designed to address
@@ -319,7 +1488,7 @@
     <div class="global-product-grid">
 
 
-        <div class="global-product-card">
+        <div class="global-product-card reveal">
 
             <div class="global-product-number">
                 01
@@ -343,7 +1512,7 @@
 
 
 
-        <div class="global-product-card">
+        <div class="global-product-card reveal">
 
             <div class="global-product-number">
                 02
@@ -367,7 +1536,7 @@
 
 
 
-        <div class="global-product-card">
+        <div class="global-product-card reveal">
 
             <div class="global-product-number">
                 03
@@ -395,17 +1564,18 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      APPLICATIONS
-================================================= -->
+========================================================= -->
 
 <section class="global-applications">
 
-    <div class="global-section-heading">
+    <div class="global-section-heading reveal">
 
         <span class="section-label">
             APPLICATIONS
         </span>
+
 
         <h2>
             Where Solar Makes a Difference
@@ -417,9 +1587,11 @@
     <div class="application-grid">
 
 
-        <div class="application-card">
+        <div class="application-card reveal">
 
-            <span>01</span>
+            <span>
+                01
+            </span>
 
             <h3>
                 Infrastructure
@@ -435,9 +1607,11 @@
 
 
 
-        <div class="application-card">
+        <div class="application-card reveal">
 
-            <span>02</span>
+            <span>
+                02
+            </span>
 
             <h3>
                 Agriculture
@@ -453,9 +1627,11 @@
 
 
 
-        <div class="application-card">
+        <div class="application-card reveal">
 
-            <span>03</span>
+            <span>
+                03
+            </span>
 
             <h3>
                 Residential
@@ -470,9 +1646,11 @@
 
 
 
-        <div class="application-card">
+        <div class="application-card reveal">
 
-            <span>04</span>
+            <span>
+                04
+            </span>
 
             <h3>
                 Commercial
@@ -492,22 +1670,24 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      WHY SUNGRID
-================================================= -->
+========================================================= -->
 
 <section class="global-why">
 
-    <div class="global-why-content">
+    <div class="global-why-content reveal">
 
         <span class="section-label">
             WHY SUNGRID
         </span>
 
+
         <h2>
             Built for Different Markets.
             Designed for Real-World Needs.
         </h2>
+
 
         <p>
             Every market has different energy requirements.
@@ -521,7 +1701,8 @@
 
     <div class="why-grid">
 
-        <div class="why-item">
+
+        <div class="why-item reveal">
 
             <strong>
                 01
@@ -539,7 +1720,8 @@
         </div>
 
 
-        <div class="why-item">
+
+        <div class="why-item reveal">
 
             <strong>
                 02
@@ -557,7 +1739,8 @@
         </div>
 
 
-        <div class="why-item">
+
+        <div class="why-item reveal">
 
             <strong>
                 03
@@ -575,7 +1758,8 @@
         </div>
 
 
-        <div class="why-item">
+
+        <div class="why-item reveal">
 
             <strong>
                 04
@@ -598,17 +1782,18 @@
 
 
 
-<!-- =================================================
-     GLOBAL PROJECT PROCESS
-================================================= -->
+<!-- =========================================================
+     PROCESS
+========================================================= -->
 
 <section class="global-process">
 
-    <div class="global-section-heading">
+    <div class="global-section-heading reveal">
 
         <span class="section-label">
             WORK WITH US
         </span>
+
 
         <h2>
             From Requirement to Solar Solution
@@ -619,7 +1804,8 @@
 
     <div class="process-grid">
 
-        <div class="process-item">
+
+        <div class="process-item reveal">
 
             <div class="process-number">
                 01
@@ -637,7 +1823,8 @@
         </div>
 
 
-        <div class="process-item">
+
+        <div class="process-item reveal">
 
             <div class="process-number">
                 02
@@ -655,7 +1842,8 @@
         </div>
 
 
-        <div class="process-item">
+
+        <div class="process-item reveal">
 
             <div class="process-number">
                 03
@@ -673,7 +1861,8 @@
         </div>
 
 
-        <div class="process-item">
+
+        <div class="process-item reveal">
 
             <div class="process-number">
                 04
@@ -696,9 +1885,9 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      CTA
-================================================= -->
+========================================================= -->
 
 <section class="global-cta">
 
@@ -706,10 +1895,12 @@
         LET'S CONNECT
     </span>
 
+
     <h2>
         Looking for Solar Solutions
         for Your Market?
     </h2>
+
 
     <p>
         Tell us about your requirements and
@@ -717,15 +1908,79 @@
         next solar project.
     </p>
 
+
     <a
         href="mailto:yourmail@example.com"
         class="global-cta-btn"
     >
-        SEND AN ENQUIRY →
+        SEND AN ENQUIRY
+        <i class="fa-solid fa-arrow-right"></i>
     </a>
 
 </section>
 
+
+
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
+
+<a
+    href="https://wa.me/919999999999"
+    class="floating-whatsapp"
+    target="_blank"
+    aria-label="Contact SunGrid on WhatsApp"
+>
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =========================================================
+     SCROLL ANIMATION
+========================================================= -->
+
+<script>
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+        new IntersectionObserver(
+
+            (entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("show");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+    revealElements.forEach(element => {
+
+        revealObserver.observe(element);
+
+    });
+
+</script>
 
 
 </body>

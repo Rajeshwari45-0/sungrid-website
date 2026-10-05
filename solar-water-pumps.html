@@ -19,6 +19,101 @@
 
     <link rel="stylesheet" href="./style.css">
 
+
+    <!-- CATEGORY SECTION CSS -->
+
+    <style>
+
+        .products-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+
+        /* CATEGORY SIDEBAR */
+
+        .category-sidebar {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+            position: sticky;
+            top: 100px;
+        }
+
+
+        .category-title {
+            background: #007bff;
+            color: #ffffff;
+            padding: 18px 20px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+
+        .category-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .category-list li {
+            border-bottom: 1px solid #eeeeee;
+        }
+
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+
+        .category-list a {
+            display: block;
+            padding: 14px 18px;
+            color: #333333;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+
+        .category-list a:hover {
+            background: #e8f2ff;
+            color: #007bff;
+        }
+
+
+        /* CURRENT PAGE */
+
+        .category-list a.active-category {
+            background: #e8f2ff;
+            color: #007bff;
+            font-weight: 700;
+            border-left: 4px solid #007bff;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+
+            .products-layout {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .category-sidebar {
+                position: static;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
@@ -29,7 +124,7 @@
 
     <nav class="navbar">
 
-        <a href="./index.html" class="logo">
+        <a href="index.html" class="logo">
 
             <img
                 src="./images/logo.png"
@@ -100,121 +195,193 @@
 <section class="products-section single-category">
 
 
-    <div class="category-products">
+    <div class="products-layout">
 
 
-        <!-- PUMP 1 -->
+        <!-- ==============================
+             CATEGORY SIDEBAR
+        ============================== -->
 
-        <article class="product-card">
+        <aside class="category-sidebar">
 
-            <div class="product-image">
-
-                <img
-                    src="./images/water-pump-1.png"
-                    alt="Solar Water Pump 1"
-                >
-
+            <div class="category-title">
+                SOLAR ENERGY
             </div>
 
 
-            <div class="product-info">
+            <ul class="category-list">
 
-                <h2>
-                    Solar Water Pump 1HP
-                </h2>
-
-                <p>
-                    Suitable for small farms, gardens and
-                    water supply applications.
-                </p>
-
-                <a
-                    href="#enquiry"
-                    class="view-product"
-                >
-                    ENQUIRE NOW →
-                </a>
-
-            </div>
-
-        </article>
+                <li>
+                    <a href="./solar-street-light.html">
+                        Solar Street Lights
+                    </a>
+                </li>
 
 
-
-        <!-- PUMP 2 -->
-
-        <article class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="./images/water-pump-2.png"
-                    alt="Solar Water Pump 2"
-                >
-
-            </div>
+                <li>
+                    <a
+                        href="./solar-water-pumps.html"
+                        class="active-category"
+                    >
+                        Solar Water Pumps
+                    </a>
+                </li>
 
 
-            <div class="product-info">
+                <li>
+                    <a href="./solar-water-heater.html">
+                        Solar Water Heater
+                    </a>
+                </li>
 
-                <h2>
-                    Solar Water Pump 2HP
-                </h2>
 
-                <p>
-                    Designed for agricultural irrigation and
-                    medium-scale water pumping requirements.
-                </p>
+                <li>
+                    <a href="./solar-garden-lights.html">
+                        Solar Garden Lights
+                    </a>
+                </li>
 
-                <a
-                    href="#enquiry"
-                    class="view-product"
-                >
-                    ENQUIRE NOW →
-                </a>
 
-            </div>
+                <li>
+                    <a href="./solar-flood-lights.html">
+                        Solar Flood Lights
+                    </a>
+                </li>
 
-        </article>
+
+                <li>
+                    <a href="./solar-inverter.html">
+                        Solar Inverter
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
 
 
 
-        <!-- PUMP 3 -->
+        <!-- ==============================
+             EXISTING PRODUCTS
+        ============================== -->
 
-        <article class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="./images/water-pump-3.png"
-                    alt="Solar Water Pump 3"
-                >
-
-            </div>
+        <div class="category-products">
 
 
-            <div class="product-info">
+            <!-- PUMP 1 -->
 
-                <h2>
-                    Solar Water Pump 5HP
-                </h2>
+            <article class="product-card">
 
-                <p>
-                    Higher-capacity solar pumping solution for
-                    larger agricultural and water supply applications.
-                </p>
+                <div class="product-image">
 
-                <a
-                    href="#enquiry"
-                    class="view-product"
-                >
-                    ENQUIRE NOW →
-                </a>
+                    <img
+                        src="https://5.imimg.com/data5/SELLER/Default/2025/9/542576486/CX/TH/QE/4831746/1-hp-solar-water-pump-1000x1000.jpg"
+                        alt="Solar Water Pump 1"
+                    >
 
-            </div>
+                </div>
 
-        </article>
 
+                <div class="product-info">
+
+                    <h2>
+                        Solar Water Pump 1HP
+                    </h2>
+
+                    <p>
+                        Suitable for small farms, gardens and
+                        water supply applications.
+                    </p>
+
+                    <a
+                        href="#enquiry"
+                        class="view-product"
+                    >
+                        ENQUIRE NOW →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PUMP 2 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://5.imimg.com/data5/SELLER/Default/2021/3/CS/RE/JR/55848311/2-hp-agricultural-solar-water-pump-500x500.jpg"
+                        alt="Solar Water Pump 2"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h2>
+                        Solar Water Pump 2HP
+                    </h2>
+
+                    <p>
+                        Designed for agricultural irrigation and
+                        medium-scale water pumping requirements.
+                    </p>
+
+                    <a
+                        href="#enquiry"
+                        class="view-product"
+                    >
+                        ENQUIRE NOW →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PUMP 3 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://th.bing.com/th/id/OPAC.1tGrTC2X1UyoyA474C474?w=658&h=658&qlt=100&o=5&dpr=1.3&pid=21.1"
+                        alt="Solar Water Pump 3"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h2>
+                        Solar Water Pump 5HP
+                    </h2>
+
+                    <p>
+                        Higher-capacity solar pumping solution for
+                        larger agricultural and water supply applications.
+                    </p>
+
+                    <a
+                        href="#enquiry"
+                        class="view-product"
+                    >
+                        ENQUIRE NOW →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
 
     </div>
 

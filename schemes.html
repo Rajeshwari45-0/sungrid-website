@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Solar Schemes & Subsidies | SunGrid</title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <link rel="stylesheet"
+          href="./style.css">
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f9ff;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.solar-hero {
+
+    min-height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            120deg,
+            #003b73,
+            #007bff 55%,
+            #00a8ff
+        );
+
+    color: white;
+}
+
+
+/* background circles */
+
+.solar-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.06);
+
+    top: -250px;
+    left: -150px;
+}
+
+.solar-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.05);
+
+    right: -300px;
+    bottom: -300px;
+}
+
+
+/* hero container */
+
+.hero-container {
+
+    max-width: 1200px;
+
+    width: 100%;
+
+    margin: auto;
+
+    padding: 80px 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* hero text */
+
+.hero-text small {
+
+    display: inline-block;
+
+    background: rgba(255,255,255,0.15);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+
+    font-size: 52px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+
+    color: #ffd43b;
+}
+
+.hero-text p {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    max-width: 600px;
+
+    color: rgba(255,255,255,0.88);
+
+    margin-bottom: 30px;
+}
+
+
+/* hero buttons */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 14px 23px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.hero-btn-primary {
+
+    background: #ffd43b;
+
+    color: #222;
+}
+
+.hero-btn-primary:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero-btn-secondary {
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.hero-btn-secondary:hover {
+
+    background: rgba(255,255,255,0.12);
+}
+
+
+/* =========================================================
+   SOLAR VISUAL
+========================================================= */
+
+.solar-visual {
+
+    height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* sun */
+
+.sun {
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff59d,
+            #ffd43b 60%,
+            #ffb300
+        );
+
+    box-shadow:
+        0 0 45px #ffd43b,
+        0 0 100px rgba(255,212,59,0.7);
+
+    position: absolute;
+
+    z-index: 3;
+
+    animation: sunPulse 3s infinite ease-in-out;
+}
+
+
+@keyframes sunPulse {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* orbit */
+
+.orbit {
+
+    position: absolute;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 50%;
+
+    animation: rotate 15s linear infinite;
+}
+
+.orbit-one {
+
+    width: 300px;
+    height: 300px;
+}
+
+.orbit-two {
+
+    width: 410px;
+    height: 410px;
+
+    animation-duration: 22s;
+}
+
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* orbit dots */
+
+.orbit-dot {
+
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.9);
+}
+
+.dot-one {
+    top: 20px;
+    left: 50%;
+}
+
+.dot-two {
+    bottom: 50px;
+    right: 20px;
+}
+
+.dot-three {
+    left: 30px;
+    bottom: 70px;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.hero-stats {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(1100px, 90%);
+
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 15px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+.stat {
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-right:
+        1px solid rgba(255,255,255,0.15);
+}
+
+.stat:last-child {
+    border: none;
+}
+
+.stat strong {
+
+    display: block;
+
+    font-size: 24px;
+
+    color: #ffd43b;
+}
+
+.stat span {
+
+    font-size: 11px;
+
+    color: rgba(255,255,255,0.8);
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 20px;
+}
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+}
+
+.section-heading span {
+
+    color: #007bff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+
+    font-size: 35px;
+
+    margin: 10px 0;
+}
+
+.section-heading p {
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SCHEME CARDS
+========================================================= */
+
+.scheme-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 30px;
+}
+
+.scheme-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid #e8eef6;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.06);
+
+    transition: 0.4s;
+}
+
+.scheme-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 45px rgba(0,123,255,0.15);
+}
+
+.scheme-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: #eaf4ff;
+
+    right: -70px;
+    top: -70px;
+}
+
+.scheme-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.scheme-icon {
+
+    width: 62px;
+    height: 62px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #007bff,
+            #00a8ff
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.scheme-header h3 {
+
+    font-size: 20px;
+}
+
+.scheme-header small {
+
+    color: #007bff;
+
+    font-weight: 600;
+
+    font-size: 12px;
+}
+
+.scheme-card p {
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 25px 0;
+}
+
+.features {
+
+    list-style: none;
+
+    margin-bottom: 25px;
+}
+
+.features li {
+
+    display: flex;
+
+    gap: 10px;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+
+    color: #444;
+}
+
+.features i {
+
+    color: #18a558;
+}
+
+.scheme-link {
+
+    display: inline-flex;
+
+    gap: 8px;
+
+    align-items: center;
+
+    color: #007bff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.scheme-link:hover {
+    color: #0056b3;
+}
+
+
+/* =========================================================
+   AUDIENCE CARDS
+========================================================= */
+
+.audience-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.audience-card {
+
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    border: 2px solid #edf1f6;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.audience-card:hover,
+.audience-card.selected {
+
+    border-color: #007bff;
+
+    background: #eef7ff;
+
+    transform: translateY(-5px);
+}
+
+.audience-card i {
+
+    font-size: 35px;
+
+    color: #007bff;
+
+    margin-bottom: 15px;
+}
+
+.audience-card h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 7px;
+}
+
+.audience-card p {
+
+    font-size: 12px;
+
+    color: #777;
+
+    line-height: 1.5;
+}
+
+.audience-result {
+
+    margin-top: 25px;
+
+    display: none;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    border-left: 5px solid #007bff;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.06);
+}
+
+.audience-result.show {
+    display: block;
+}
+
+
+/* =========================================================
+   CALCULATOR
+========================================================= */
+
+.calculator {
+
+    background:
+        linear-gradient(
+            135deg,
+            #003b73,
+            #007bff
+        );
+
+    border-radius: 22px;
+
+    padding: 45px;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.calculator::after {
+
+    content: "₹";
+
+    position: absolute;
+
+    right: 40px;
+
+    top: -80px;
+
+    font-size: 300px;
+
+    color: rgba(255,255,255,0.04);
+
+    font-weight: 800;
+}
+
+.calculator-info {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.calculator-info h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.calculator-info p {
+
+    color: rgba(255,255,255,0.8);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.calc-box {
+
+    position: relative;
+
+    z-index: 2;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    color: #222;
+}
+
+.calc-box label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.calc-box select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    margin-bottom: 15px;
+
+    font-family: inherit;
+}
+
+.calc-btn {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 13px;
+
+    border-radius: 7px;
+
+    background: #007bff;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.calc-btn:hover {
+
+    background: #0056b3;
+}
+
+.result {
+
+    display: none;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    background: #eaf5ff;
+
+    padding: 18px;
+
+    border-radius: 10px;
+}
+
+.result.show {
+    display: block;
+}
+
+.result small {
+
+    color: #666;
+}
+
+.result strong {
+
+    display: block;
+
+    color: #007bff;
+
+    font-size: 30px;
+
+    margin: 4px;
+}
+
+
+/* =========================================================
+   STEPS
+========================================================= */
+
+.timeline {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 20px;
+
+    position: relative;
+}
+
+.timeline-card {
+
+    background: white;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.06);
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.timeline-card:hover {
+
+    transform: translateY(-5px);
+}
+
+.number {
+
+    width: 50px;
+    height: 50px;
+
+    margin: auto auto 15px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #007bff,
+            #00a8ff
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.timeline-card h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.timeline-card p {
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq {
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.faq-item {
+
+    background: white;
+
+    border-radius: 10px;
+
+    margin-bottom: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+
+    width: 100%;
+
+    background: white;
+
+    border: none;
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    text-align: left;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.faq-question i {
+
+    color: #007bff;
+
+    transition: 0.3s;
+}
+
+.faq-answer {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: 0.35s;
+}
+
+.faq-answer p {
+
+    padding: 0 20px 20px;
+
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.faq-item.active
+.faq-answer {
+
+    max-height: 200px;
+}
+
+.faq-item.active
+.faq-question i {
+
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+
+    max-width: 1100px;
+
+    margin: 0 auto 80px;
+
+    border-radius: 22px;
+
+    padding: 60px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #007bff,
+            #003b73
+        );
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.cta h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.cta p {
+
+    font-size: 14px;
+
+    color: rgba(255,255,255,0.85);
+
+    max-width: 650px;
+
+    margin: auto auto 25px;
+}
+
+.cta a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #ffd43b;
+
+    color: #222;
+
+    padding: 13px 24px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp {
+
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 57px;
+    height: 57px;
+
+    border-radius: 50%;
+
+    background: #25d366;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    z-index: 999;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.2);
+
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px) {
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .solar-visual {
+        height: 350px;
+    }
+
+    .scheme-grid,
+    .calculator {
+
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+@media(max-width:650px) {
+
+    .solar-hero {
+
+        min-height: 720px;
+    }
+
+    .hero-text h1 {
+
+        font-size: 37px;
+    }
+
+    .hero-stats {
+
+        width: 94%;
+    }
+
+    .stat {
+
+        padding: 12px 5px;
+    }
+
+    .stat strong {
+
+        font-size: 17px;
+    }
+
+    .stat span {
+
+        font-size: 9px;
+    }
+
+    .sun {
+
+        width: 130px;
+        height: 130px;
+    }
+
+    .orbit-one {
+
+        width: 220px;
+        height: 220px;
+    }
+
+    .orbit-two {
+
+        width: 290px;
+        height: 290px;
+    }
+
+    .audience-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+
+        grid-template-columns: 1fr;
+    }
+
+    .calculator {
+
+        padding: 25px;
+    }
+
+    .section {
+
+        padding: 55px 15px;
+    }
+
+    .section-heading h2 {
+
+        font-size: 28px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="top-section">
+
+    <nav class="navbar">
+
+        <a href="./index.html"
+           class="logo">
+
+            <img
+                src="./images/logo.png"
+                alt="SunGrid Logo"
+            >
+
+        </a>
+
+
+        <ul>
+
+            <li>
+                <a href="./index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="./about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="./products.html">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="./global-market.html">
+                    Global Market
+                </a>
+            </li>
+
+            <li>
+                <a href="./schemes.html"
+                   class="active">
+                    Schemes
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="solar-hero">
+
+    <div class="hero-container">
+
+
+        <div class="hero-text">
+
+            <small>
+                <i class="fa-solid fa-sun"></i>
+                SOLAR SCHEMES & SUBSIDIES
+            </small>
+
+            <h1>
+                Switch to Solar.
+                <span>Save More.</span>
+            </h1>
+
+            <p>
+                Discover government solar schemes, financial
+                assistance and support available for homes,
+                farms and renewable energy projects.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#schemes"
+                    class="hero-btn hero-btn-primary"
+                >
+
+                    Explore Schemes
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                </a>
+
+
+                <a
+                    href="#calculator"
+                    class="hero-btn hero-btn-secondary"
+                >
+
+                    <i class="fa-solid fa-calculator"></i>
+
+                    Calculate Subsidy
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SOLAR VISUAL -->
+
+        <div class="solar-visual">
+
+            <div class="orbit orbit-one">
+
+                <div class="orbit-dot dot-one"></div>
+
+            </div>
+
+
+            <div class="orbit orbit-two">
+
+                <div class="orbit-dot dot-two"></div>
+
+                <div class="orbit-dot dot-three"></div>
+
+            </div>
+
+
+            <div class="sun">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- HERO STATS -->
+
+    <div class="hero-stats">
+
+        <div class="stat">
+
+            <strong>
+                3 kW
+            </strong>
+
+            <span>
+                CFA structure applies up to this capacity
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                ₹78K
+            </strong>
+
+            <span>
+                Maximum published CFA for eligible 3 kW+
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                2+
+            </strong>
+
+            <span>
+                Major schemes highlighted
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCHEMES
+===================================================== -->
+
+<section
+    class="section"
+    id="schemes"
+>
+
+    <div class="section-heading">
+
+        <span>
+            GOVERNMENT INITIATIVES
+        </span>
+
+        <h2>
+            Explore Solar Schemes
+        </h2>
+
+        <p>
+            Understand which government initiative may apply
+            to your solar requirement.
+        </p>
+
+    </div>
+
+
+
+    <div class="scheme-grid">
+
+
+        <!-- PM SURYA GHAR -->
+
+        <div class="scheme-card">
+
+            <div class="scheme-header">
+
+                <div class="scheme-icon">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        PM Surya Ghar
+                    </h3>
+
+                    <small>
+                        Muft Bijli Yojana
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                A central government rooftop solar initiative
+                for eligible residential electricity consumers.
+            </p>
+
+
+            <ul class="features">
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Residential rooftop solar
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Central Financial Assistance
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    CFA structure up to 3 kW
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Online national portal
+                </li>
+
+            </ul>
+
+
+            <a
+                href="https://pmsuryaghar.gov.in/"
+                target="_blank"
+                class="scheme-link"
+            >
+
+                Visit Official Portal
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- PM KUSUM -->
+
+        <div class="scheme-card">
+
+            <div class="scheme-header">
+
+                <div class="scheme-icon">
+
+                    <i class="fa-solid fa-tractor"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        PM-KUSUM
+                    </h3>
+
+                    <small>
+                        Agriculture & Solar Pumps
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                A renewable energy programme supporting solar
+                applications in the agricultural sector.
+            </p>
+
+
+            <ul class="features">
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Solar agricultural pumps
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Pump solarisation
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Renewable energy projects
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    State-level implementation
+                </li>
+
+            </ul>
+
+
+            <a
+                href="https://pmkusum.mnre.gov.in/"
+                target="_blank"
+                class="scheme-link"
+            >
+
+                Visit Official Portal
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHO IS IT FOR?
+===================================================== -->
+
+<section
+    class="section"
+    style="padding-top:20px;"
+>
+
+    <div class="section-heading">
+
+        <span>
+            FIND YOUR CATEGORY
+        </span>
+
+        <h2>
+            What Are You Looking For?
+        </h2>
+
+        <p>
+            Select an option to see the type of scheme
+            that may be relevant.
+        </p>
+
+    </div>
+
+
+    <div class="audience-grid">
+
+
+        <div
+            class="audience-card"
+            onclick="chooseAudience(this,'home')"
+        >
+
+            <i class="fa-solid fa-house-chimney"></i>
+
+            <h3>
+                My Home
+            </h3>
+
+            <p>
+                Rooftop solar for residential electricity use
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="audience-card"
+            onclick="chooseAudience(this,'farm')"
+        >
+
+            <i class="fa-solid fa-wheat-awn"></i>
+
+            <h3>
+                My Farm
+            </h3>
+
+            <p>
+                Solar pumps and agricultural applications
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="audience-card"
+            onclick="chooseAudience(this,'project')"
+        >
+
+            <i class="fa-solid fa-building"></i>
+
+            <h3>
+                My Project
+            </h3>
+
+            <p>
+                Other renewable energy requirements
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="audience-result"
+        id="audienceResult"
+    >
+
+        <strong id="audienceTitle">
+        </strong>
+
+        <p
+            id="audienceText"
+            style="
+                margin-top:8px;
+                color:#666;
+                font-size:13px;
+                line-height:1.7;
+            "
+        >
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CALCULATOR
+===================================================== -->
+
+<section
+    class="section"
+    id="calculator"
+>
+
+    <div class="section-heading">
+
+        <span>
+            QUICK CALCULATOR
+        </span>
+
+        <h2>
+            Estimate Your Solar CFA
+        </h2>
+
+        <p>
+            Select your residential rooftop solar capacity
+            to view the indicative CFA amount.
+        </p>
+
+    </div>
+
+
+
+    <div class="calculator">
+
+
+        <div class="calculator-info">
+
+            <h2>
+                How much assistance could apply?
+            </h2>
+
+            <p>
+                The published PM Surya Ghar CFA structure
+                provides 60% CFA for the first 2 kW and
+                40% of additional system cost for the next
+                1 kW, with the CFA capped at 3 kW.
+            </p>
+
+        </div>
+
+
+
+        <div class="calc-box">
+
+            <label>
+                Select Solar Capacity
+            </label>
+
+
+            <select id="capacity">
+
+                <option value="">
+                    Choose capacity
+                </option>
+
+                <option value="1">
+                    1 kW
+                </option>
+
+                <option value="2">
+                    2 kW
+                </option>
+
+                <option value="3">
+                    3 kW
+                </option>
+
+                <option value="4">
+                    Above 3 kW
+                </option>
+
+            </select>
+
+
+            <button
+                class="calc-btn"
+                onclick="calculate()"
+            >
+
+                Calculate
+
+                <i class="fa-solid fa-calculator"></i>
+
+            </button>
+
+
+            <div
+                class="result"
+                id="result"
+            >
+
+                <small>
+                    Indicative maximum CFA
+                </small>
+
+                <strong id="amount">
+                    ₹0
+                </strong>
+
+                <small>
+                    Based on published CFA structure
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     APPLICATION PROCESS
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span>
+            SIMPLE PROCESS
+        </span>
+
+        <h2>
+            How Solar Scheme Applications Work
+        </h2>
+
+        <p>
+            The exact procedure varies by scheme and state,
+            but the journey generally follows these stages.
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-card">
+
+            <div class="number">
+                01
+            </div>
+
+            <h3>
+                Check Eligibility
+            </h3>
+
+            <p>
+                Understand the requirements of the relevant
+                government scheme.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-card">
+
+            <div class="number">
+                02
+            </div>
+
+            <h3>
+                Submit Application
+            </h3>
+
+            <p>
+                Apply through the relevant official government
+                portal or implementing authority.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-card">
+
+            <div class="number">
+                03
+            </div>
+
+            <h3>
+                Installation
+            </h3>
+
+            <p>
+                Complete the required solar installation,
+                inspection and verification process.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-card">
+
+            <div class="number">
+                04
+            </div>
+
+            <h3>
+                Receive Benefit
+            </h3>
+
+            <p>
+                Eligible applicants receive the applicable
+                benefit according to scheme rules.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="section">
+
+    <div class="section-heading">
+
+        <span>
+            FAQ
+        </span>
+
+        <h2>
+            Frequently Asked Questions
+        </h2>
+
+    </div>
+
+
+    <div class="faq">
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-question"
+                onclick="toggleFAQ(this)"
+            >
+
+                What is PM Surya Ghar?
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <p>
+                    PM Surya Ghar: Muft Bijli Yojana is a central
+                    government rooftop solar initiative for eligible
+                    residential consumers.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-question"
+                onclick="toggleFAQ(this)"
+            >
+
+                What is the maximum published CFA?
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <p>
+                    Under the published CFA structure, the amount
+                    is ₹30,000 for 1 kW, ₹60,000 for 2 kW and
+                    ₹78,000 for 3 kW or higher eligible residential
+                    systems.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-question"
+                onclick="toggleFAQ(this)"
+            >
+
+                What is PM-KUSUM?
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <p>
+                    PM-KUSUM is a renewable energy programme
+                    supporting solar applications in agriculture,
+                    including solar pumps and pump solarisation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-question"
+                onclick="toggleFAQ(this)"
+            >
+
+                Where can I apply?
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <p>
+                    For PM Surya Ghar, use the official
+                    PM Surya Ghar National Portal. PM-KUSUM
+                    applications depend on the relevant component
+                    and designated state implementing authority.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+    <h2>
+        Ready to Explore Solar?
+    </h2>
+
+    <p>
+        Discover SunGrid's range of solar products for homes,
+        agriculture and outdoor applications.
+    </p>
+
+    <a href="./products.html">
+
+        Explore Products
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a
+    href="https://wa.me/919999999999"
+    target="_blank"
+    class="whatsapp"
+    aria-label="Chat on WhatsApp"
+>
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   CALCULATOR
+===================================================== */
+
+function calculate() {
+
+    const capacity =
+        document.getElementById("capacity").value;
+
+    const result =
+        document.getElementById("result");
+
+    const amount =
+        document.getElementById("amount");
+
+
+    let value = 0;
+
+
+    if (capacity === "1") {
+
+        value = 30000;
+
+    }
+
+    else if (capacity === "2") {
+
+        value = 60000;
+
+    }
+
+    else if (capacity === "3") {
+
+        value = 78000;
+
+    }
+
+    else if (capacity === "4") {
+
+        value = 78000;
+
+    }
+
+    else {
+
+        alert("Please select a solar capacity.");
+
+        return;
+
+    }
+
+
+    amount.textContent =
+        "₹" + value.toLocaleString("en-IN");
+
+
+    result.classList.add("show");
+
+}
+
+
+
+/* =====================================================
+   AUDIENCE SELECTOR
+===================================================== */
+
+function chooseAudience(card, type) {
+
+
+    document
+        .querySelectorAll(".audience-card")
+        .forEach(function(item) {
+
+            item.classList.remove("selected");
+
+        });
+
+
+    card.classList.add("selected");
+
+
+    const result =
+        document.getElementById("audienceResult");
+
+    const title =
+        document.getElementById("audienceTitle");
+
+    const text =
+        document.getElementById("audienceText");
+
+
+    if (type === "home") {
+
+        title.textContent =
+            "🏠 PM Surya Ghar may be relevant to you";
+
+        text.textContent =
+            "This scheme is designed for eligible residential consumers interested in rooftop solar.";
+
+    }
+
+
+    else if (type === "farm") {
+
+        title.textContent =
+            "🌾 PM-KUSUM may be relevant to you";
+
+        text.textContent =
+            "PM-KUSUM supports eligible agricultural solar applications including solar pumps and pump solarisation.";
+
+    }
+
+
+    else {
+
+        title.textContent =
+            "🏢 Check the applicable renewable-energy scheme";
+
+        text.textContent =
+            "Commercial, institutional and other projects may have different eligibility requirements and support structures.";
+
+    }
+
+
+    result.classList.add("show");
+
+}
+
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+function toggleFAQ(button) {
+
+
+    const item =
+        button.parentElement;
+
+
+    document
+        .querySelectorAll(".faq-item")
+        .forEach(function(other) {
+
+            if (other !== item) {
+
+                other.classList.remove("active");
+
+            }
+
+        });
+
+
+    item.classList.toggle("active");
+
+}
+
+</script>
+
+
+</body>
+
+</html>

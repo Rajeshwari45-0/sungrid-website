@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Solar Garden Lights | SunGrid</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./style.css">
+
+
+    <!-- CATEGORY SECTION CSS -->
+
+    <style>
+
+        .products-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+
+        /* ==============================
+           CATEGORY SIDEBAR
+        ============================== */
+
+        .category-sidebar {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+            position: sticky;
+            top: 100px;
+        }
+
+
+        .category-title {
+            background: #007bff;
+            color: #ffffff;
+            padding: 18px 20px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+
+        .category-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .category-list li {
+            border-bottom: 1px solid #eeeeee;
+        }
+
+
+        .category-list li:last-child {
+            border-bottom: none;
+        }
+
+
+        .category-list a {
+            display: block;
+            padding: 14px 18px;
+            color: #333333;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+
+        .category-list a:hover {
+            background: #e8f2ff;
+            color: #007bff;
+        }
+
+
+        .category-list a.active-category {
+            background: #e8f2ff;
+            color: #007bff;
+            font-weight: 700;
+            border-left: 4px solid #007bff;
+        }
+
+
+        /* ==============================
+           GARDEN LIGHT PRODUCTS
+        ============================== */
+
+        .category-products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+        }
+
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+        }
+
+
+        .product-image {
+            width: 100%;
+            height: 280px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+        }
+
+
+        .product-info {
+            padding: 22px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .product-info h2 {
+            color: #222222;
+            font-size: 20px;
+            margin: 0 0 12px;
+        }
+
+
+        .product-info p {
+            color: #666666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+
+        .view-product {
+            margin-top: auto;
+            display: inline-block;
+            width: fit-content;
+            padding: 10px 18px;
+            background: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+
+        .view-product:hover {
+            background: #0056b3;
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 1100px) {
+
+            .category-products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .products-layout {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .category-sidebar {
+                position: static;
+            }
+
+            .category-products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .category-products {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image {
+                height: 260px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     NAVBAR
+============================== -->
+
+<header class="top-section">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="./images/logo.png"
+                alt="SunGrid Logo"
+            >
+
+        </a>
+
+
+        <ul>
+
+            <li>
+                <a href="./index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="./about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="./product.html" class="active">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="./global-market.html">
+                    Global Market
+                </a>
+            </li>
+
+            <li>
+                <a href="./schemes.html">
+                    Schemes
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==============================
+     PAGE HEADER
+============================== -->
+
+<section class="catalog-header">
+
+    <span class="catalog-label">
+        SOLAR LIGHTING
+    </span>
+
+    <h1>
+        Solar Garden Lights
+    </h1>
+
+    <p>
+        Beautiful solar-powered lighting for gardens, pathways and outdoor spaces
+    </p>
+
+</section>
+
+
+
+<!-- ==============================
+     PRODUCTS SECTION
+============================== -->
+
+<section class="products-section single-category">
+
+
+    <div class="products-layout">
+
+
+        <!-- ==============================
+             CATEGORY SIDEBAR
+        ============================== -->
+
+        <aside class="category-sidebar">
+
+            <div class="category-title">
+                SOLAR ENERGY
+            </div>
+
+
+            <ul class="category-list">
+
+                <li>
+                    <a href="./solar-street-light.html">
+                        Solar Street Lights
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="./solar-water-pumps.html">
+                        Solar Water Pumps
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="./solar-water-heater.html">
+                        Solar Water Heater
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="./solar-garden-lights.html"
+                        class="active-category"
+                    >
+                        Solar Garden Lights
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="./solar-flood-lights.html">
+                        Solar Flood Lights
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="./solar-inverter.html">
+                        Solar Inverter
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+
+        <!-- ==============================
+             GARDEN LIGHT PRODUCTS
+        ============================== -->
+
+        <div class="category-products">
+
+
+            <!-- GARDEN LIGHT 1 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://th.bing.com/th?id=OIF.yLfy884UpnvuNFLzwd%2bMjA&r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="Solar Garden Spike Light"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h2>
+                        Solar Garden Spike Light
+                    </h2>
+
+                    <p>
+                        Decorative solar garden light suitable for
+                        pathways, lawns, gardens and outdoor spaces.
+                    </p>
+
+                    <a
+                        href="#enquiry"
+                        class="view-product"
+                    >
+                        ENQUIRE NOW →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- GARDEN LIGHT 2 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://tse2.mm.bing.net/th/id/OIP.zbxEq-Jbo3DUjafbAu5AUgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="Solar Lawn Light"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h2>
+                        Solar Lawn Light
+                    </h2>
+
+                    <p>
+                        Energy-efficient solar lawn lighting solution
+                        for garden borders, pathways and landscapes.
+                    </p>
+
+                    <a
+                        href="#enquiry"
+                        class="view-product"
+                    >
+                        ENQUIRE NOW →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- GARDEN LIGHT 3 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://m.media-amazon.com/images/I/81qjTHykPdL._AC_.jpg"
+                        alt="Solar Garden Deck Light"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h2>
+                        Solar Garden Deck Light
+                    </h2>
+
+                    <p>
+                        Stylish solar-powered outdoor light suitable
+                        for gardens, patios, pathways and decks.
+                    </p>
+
+                    <a
+                        href="#enquiry"
+                        class="view-product"
+                    >
+                        ENQUIRE NOW →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     ENQUIRY SECTION
+============================== -->
+
+<section class="enquiry-section" id="enquiry">
+
+    <h2>
+        Looking for Solar Garden Lights?
+    </h2>
+
+    <p>
+        Contact SunGrid for more information about our solar garden
+        lighting solutions.
+    </p>
+
+    <a
+        href="mailto:yourmail@example.com"
+        class="enquiry-main-btn"
+    >
+        SEND ENQUIRY
+    </a>
+
+</section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Solar Inverter | SunGrid</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+
+        /* ================= GENERAL ================= */
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+
+        /* ================= CATEGORY HEADER ================= */
+
+        .catalog-header {
+            text-align: center;
+            padding: 60px 20px 45px;
+            background: #ffffff;
+        }
+
+        .catalog-label {
+            display: inline-block;
+            color: #007bff;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .catalog-header h1 {
+            margin: 0 0 10px;
+            font-size: 38px;
+            color: #222;
+        }
+
+        .catalog-header p {
+            margin: 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+
+        /* ================= PRODUCTS LAYOUT ================= */
+
+        .products-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px 70px;
+
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+
+            align-items: start;
+        }
+
+
+        /* ================= SIDEBAR ================= */
+
+        .product-sidebar {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-title {
+            background: #007bff;
+            color: #ffffff;
+
+            padding: 18px 20px;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar-title h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .sidebar-icon {
+            font-size: 18px;
+        }
+
+
+        .category-group {
+            padding: 0;
+        }
+
+        .category-group h3 {
+            margin: 0;
+            padding: 16px 18px;
+
+            font-size: 14px;
+            color: #333;
+
+            border-bottom: 1px solid #eeeeee;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-group h3 span {
+            color: #007bff;
+            font-size: 20px;
+        }
+
+
+        .category-group a {
+            display: block;
+
+            padding: 13px 18px;
+
+            color: #333;
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            border-bottom: 1px solid #eeeeee;
+
+            transition: 0.3s;
+        }
+
+        .category-group a:hover {
+            background: #e8f2ff;
+            color: #007bff;
+        }
+
+
+        /* ACTIVE CATEGORY */
+
+        .category-group a.active-category {
+            background: #e8f2ff;
+            color: #007bff;
+
+            font-weight: 700;
+
+            border-left: 4px solid #007bff;
+        }
+
+
+        /* ================= PRODUCT GRID ================= */
+
+        .products-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* ================= PRODUCT CARD ================= */
+
+        .product-card {
+            background: #ffffff;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+            display: flex;
+            flex-direction: column;
+
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 22px rgba(0, 0, 0, 0.16);
+        }
+
+
+        /* ================= PRODUCT IMAGE ================= */
+
+        .product-image {
+            width: 100%;
+            height: 280px;
+
+            background: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 15px;
+
+            box-sizing: border-box;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+            object-position: center;
+
+            display: block;
+        }
+
+
+        /* ================= PRODUCT INFO ================= */
+
+        .product-info {
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+
+            flex-grow: 1;
+        }
+
+        .product-info h2 {
+            margin: 0 0 10px;
+
+            font-size: 18px;
+
+            color: #222;
+        }
+
+        .product-info p {
+            margin: 0 0 20px;
+
+            color: #666;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            flex-grow: 1;
+        }
+
+
+        /* ================= ENQUIRY BUTTON ================= */
+
+        .enquiry-btn {
+            display: inline-block;
+
+            background: #007bff;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            text-align: center;
+
+            padding: 10px 15px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .enquiry-btn:hover {
+            background: #0056b3;
+        }
+
+
+        /* ================= ENQUIRY SECTION ================= */
+
+        .enquiry-section {
+            max-width: 900px;
+
+            margin: 20px auto 70px;
+
+            padding: 45px 25px;
+
+            text-align: center;
+
+            background: #e8f2ff;
+
+            border-radius: 15px;
+        }
+
+        .enquiry-section h2 {
+            margin: 0 0 10px;
+
+            color: #222;
+
+            font-size: 28px;
+        }
+
+        .enquiry-section p {
+            margin: 0 0 25px;
+
+            color: #555;
+
+            font-size: 15px;
+        }
+
+        .enquiry-main-btn {
+            display: inline-block;
+
+            background: #007bff;
+
+            color: #ffffff;
+
+            padding: 12px 25px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .enquiry-main-btn:hover {
+            background: #0056b3;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1100px) {
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .products-section {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .product-sidebar {
+                position: static;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .catalog-header h1 {
+                font-size: 30px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image {
+                height: 280px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="top-section">
+
+    <nav class="navbar">
+
+        <a href="./index.html" class="logo">
+
+            <img
+                src="./images/logo.png"
+                alt="SunGrid Logo"
+            >
+
+        </a>
+
+
+        <ul>
+
+            <li>
+                <a href="./index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="./about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="./products.html" class="active">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="./global-market.html">
+                    Global Market
+                </a>
+            </li>
+
+            <li>
+                <a href="./schemes.html">
+                    Schemes
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= PRODUCT HEADER ================= -->
+
+<section class="catalog-header">
+
+    <span class="catalog-label">
+        SOLAR POWER SOLUTIONS
+    </span>
+
+    <h1>
+        Solar Inverter
+    </h1>
+
+    <p>
+        Reliable solar inverters for efficient and uninterrupted power
+    </p>
+
+</section>
+
+
+
+<!-- ================= PRODUCT AREA ================= -->
+
+<section class="products-section">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="product-sidebar">
+
+
+        <div class="sidebar-title">
+
+            <span class="sidebar-icon">
+                ☰
+            </span>
+
+            <h2>
+                Categories
+            </h2>
+
+        </div>
+
+
+        <div class="category-group">
+
+            <h3>
+                SOLAR ENERGY
+                <span>‹</span>
+            </h3>
+
+
+            <a href="./solar-street-light.html">
+                Solar Street Lights
+            </a>
+
+
+            <a href="./solar-water-pumps.html">
+                Solar Water Pumps
+            </a>
+
+
+            <a href="./solar-water-heater.html">
+                Solar Water Heater
+            </a>
+
+
+            <a href="./solar-garden-lights.html">
+                Solar Garden Lights
+            </a>
+
+
+            <a href="./solar-decorative-lights.html">
+                Solar Decorative Lights
+            </a>
+
+
+            <a href="./solar-flood-lights.html">
+                Solar Flood Lights
+            </a>
+
+
+            <a
+                href="./solar-inverter.html"
+                class="active-category"
+            >
+                Solar Inverter
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= PRODUCT GRID ================= -->
+
+    <div class="products-grid">
+
+
+        <!-- ================= PRODUCT 1 ================= -->
+
+        <article class="product-card">
+
+
+            <div class="product-image">
+
+                <img
+                    src="https://tse3.mm.bing.net/th/id/OIP.STOoJ6_cvAqE_uR7L43OfwHaIz?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="Solar Inverter 1kVA"
+                >
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h2>
+                    Solar Inverter 1kVA
+                </h2>
+
+                <p>
+                    Compact solar inverter suitable for small homes,
+                    shops and basic power backup requirements.
+                </p>
+
+                <a
+                    href="#enquiry"
+                    class="enquiry-btn"
+                >
+                    ENQUIRY NOW
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= PRODUCT 2 ================= -->
+
+        <article class="product-card">
+
+
+            <div class="product-image">
+
+                <img
+                    src="https://d2qc09rl1gfuof.cloudfront.net/product/GPNKYTJ3KW-24WYON/hybrid-inverter-m100-1.2.jpg"
+                    alt="Solar Hybrid Inverter"
+                >
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h2>
+                    Solar Hybrid Inverter
+                </h2>
+
+                <p>
+                    Hybrid solar inverter designed to work with solar
+                    panels, batteries and grid power.
+                </p>
+
+                <a
+                    href="#enquiry"
+                    class="enquiry-btn"
+                >
+                    ENQUIRY NOW
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= PRODUCT 3 ================= -->
+
+        <article class="product-card">
+
+
+            <div class="product-image">
+
+                <img
+                    src="https://tse2.mm.bing.net/th/id/OIP.rxyV8Exy6fcAiW2lgRTCQAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="Solar Inverter 5kVA"
+                >
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h2>
+                    Solar Inverter 5kVA
+                </h2>
+
+                <p>
+                    Higher-capacity solar inverter for larger homes,
+                    offices and commercial applications.
+                </p>
+
+                <a
+                    href="#enquiry"
+                    class="enquiry-btn"
+                >
+                    ENQUIRY NOW
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ENQUIRY SECTION ================= -->
+
+<section
+    class="enquiry-section"
+    id="enquiry"
+>
+
+    <h2>
+        Looking for a Solar Inverter?
+    </h2>
+
+    <p>
+        Contact SunGrid for more information about our solar inverter solutions.
+    </p>
+
+    <a
+        href="mailto:yourmail@example.com"
+        class="enquiry-main-btn"
+    >
+        SEND ENQUIRY
+    </a>
+
+</section>
+
+</body>
+
+</html>
